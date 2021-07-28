@@ -1,0 +1,160 @@
+@media screen and (max-width: 76.1875em) {
+  .landing__container {
+    padding: 0 0.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    display: flex;
+  }
+  .landing__container {
+    display: flex;
+    min-height: 100vh;
+  }
+  .landing__container .md-grid {
+    margin: 0;
+    width: 100%;
+  }
+  .hero .hero__title {
+    font-size: 3em;
+  }
+  .hero .hero__subtitle {
+    max-width: 80%;
+  }
+  .hero__image-container {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    display: block;
+    margin-block-start: 50px;
+    margin-block-end: 200px;
+  }
+  .landing__container {
+    display: block;
+    min-height: 100vh;
+  }
+  .landing__container .md-grid {
+    width: 80%;
+  }
+  .hero .hero__title {
+    font-size: 2.125em;
+  }
+  .hero .hero__title,
+  .hero .hero__subtitle {
+    text-align: center;
+    margin: 5% 10%;
+  }
+  .hero__image-container {
+    margin: 10% 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    display: block;
+    margin-block-start: 50px;
+    margin-block-end: 100px;
+  }
+  .landing__container {
+    display: block;
+    min-height: 90vh;
+  }
+  .landing__container .md-grid {
+    width: 80%;
+  }
+  .hero .hero__title {
+    font-size: 2.125em;
+  }
+  .hero .hero__title,
+  .hero .hero__subtitle {
+    text-align: center;
+    margin: 5% 5%;
+  }
+  .hero__image-container {
+    margin: 10% 0;
+  }
+}
+
+.md-main {
+  margin-top: -10.5em;
+}
+
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  margin: 0 0.2rem;
+  padding: 0;
+}
+
+.md-content__inner::before,
+.md-skip {
+  display: none;
+}
+
+.line-clamp {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.icon__container {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.landing__container {
+  background-color: var(--md-primary-bg-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4em;
+}
+
+.hero__header {
+  flex: 1 2 30%;
+}
+
+.hero .hero__title {
+  font-weight: 900;
+}
+
+.hero .hero__subtitle {
+  font-weight: 400;
+}
+
+.hero__image-container {
+  flex: 2 1 auto;
+  padding: 0;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+}
+
+.content--intro .section__title {
+  font-size: 2.25em;
+  font-weight: 900;
+  margin-top: 6.5rem;
+  margin-bottom: 3rem;
+}

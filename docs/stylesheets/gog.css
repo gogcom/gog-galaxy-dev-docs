@@ -1,0 +1,182 @@
+:root {
+  --gog-header-color:                  #f2f2f2;
+}
+
+[data-md-color-scheme="light"] {
+  /* Default color shades */
+  --md-default-fg-color--light:        #0b0d0f;
+  --md-default-fg-color--lighter:      #b56cfe;
+  --md-default-fg-color--lightest:     #f7f7f7;
+  --md-default-bg-color:               #f7f7f7;
+  --md-primary-fg-color:               #b56cfe;
+  --md-primary-bg-color:               #f2f2f2;
+
+  /* button and text hover/focus */
+  --md-accent-fg-color:                #c99aff;
+  --md-accent-fg-color--transparent:   rgba(201, 154, 255, 0.1);
+
+  /* default text colors */
+  --md-typeset-color:                  var(--md-default-fg-color--light);
+  --md-typeset-a-color:                #6901D2;
+  --md-admonition-bg-color:            #ffffff;
+
+  --md-code-bg-color:                  #ffffff;
+  --md-code-fg-color:                  var(--md-default-fg-color--light);
+
+  --gog-tile-bg-color:                 #ffffff;
+  --gog-tile-hover-bg-color:           #ffffff;
+  --gog-tile-hover-color:              #b56cfe;
+  --gog-tile-action-color:             #6901d2;
+
+  --gog-header-bg-color:               #430184;
+  --gog-menu-color:                    #0c0d0d;
+  --gog-menu-bg-color:                 #f2f2f2;
+  --gog-search-bg-color:               #f8f9fa;
+
+  --md-footer-bg-color:                #f2f2f2;
+  --md-footer-fg-color:                var(--md-typeset-color);
+
+  /* light theme icon colors */
+  --gog-Introduction-icon-color:       #6e7787;
+  --gog-Glossary-icon-color:           #4fb29a;
+  --gog-QuickStart-icon-color:         #5e81eb;
+  --gog-ReleasingGame-icon-color:      #e94e48;
+  --gog-DeveloperPortal-icon-color:    #6025ac;
+  --gog-GamesInDevelopment-icon-color: #38a6cd;
+  --gog-BuildCreator-icon-color:       #2b7d67;
+  --gog-PipelineBuilder-icon-color:    #5e81eb;
+  --gog-SDK-icon-color:                #f98e01;
+  --gog-FAQ-icon-color:                #2bc6db;
+}
+
+[data-md-color-scheme="dark"] {
+  /* Default color shades */
+  --md-default-fg-color--light:        #f2f2f2;
+  --md-default-fg-color--lighter:      #b56cfe;
+  --md-default-fg-color--lightest:     #222c35;
+  --md-default-bg-color:               #222c35;
+  --md-primary-fg-color:               #b56cfe;
+  --md-primary-bg-color:               hsla(180, 4%, 5%, 0.5);
+
+  /* button and text hover/focus */
+  --md-accent-fg-color:                #e4ccff;
+  --md-accent-fg-color--transparent:   rgba(201, 154, 255, 0.1);
+
+  /* default text colors */
+  --md-typeset-color:                  var(--md-default-fg-color--light);
+  --md-typeset-a-color:                #c99aff;
+
+  --md-admonition-bg-color:            #28343e;
+
+  --md-code-bg-color:                  #1d272f;
+  --md-code-fg-color:                  var(--md-default-fg-color--light);
+
+  --md-code-hl-function-color:         #c99aff;
+  --md-code-hl-keyword-color:          #4a9dff;
+  --md-code-hl-string-color:           #4affbe;
+
+  --gog-tile-bg-color:                 #1d272f;
+  --gog-tile-hover-bg-color:           #000000;
+  --gog-tile-hover-color:              #c99aff;
+  --gog-tile-action-color:             #b56cfe;
+
+  --gog-header-bg-color:               #0c0d0d;
+  --gog-menu-color:                    #f2f2f2;
+  --gog-menu-bg-color:                 #1d272f;
+  --gog-search-bg-color:               #28343e;
+
+  --md-footer-bg-color:                #1D272F;
+
+  /* dark theme icon colors */
+  --gog-Introduction-icon-color:       #6e7787;
+  --gog-Glossary-icon-color:           #4fb29a;
+  --gog-QuickStart-icon-color:         #5e81eb;
+  --gog-ReleasingGame-icon-color:      #e94e48;
+  --gog-DeveloperPortal-icon-color:    #af85e5;
+  --gog-GamesInDevelopment-icon-color: #38a6cd;
+  --gog-BuildCreator-icon-color:       #4cc2a2;
+  --gog-PipelineBuilder-icon-color:    #5e81eb;
+  --gog-SDK-icon-color:                #f98e01;
+  --gog-FAQ-icon-color:                #2bc6db;
+}
+
+/* general overrides */
+@media screen and (min-width: 60em) {
+  .md-search__input+.md-search__icon {
+    color: var(--md-typeset-color);
+  }
+}
+
+.md-header,
+.md-tabs,
+.md-search__icon,
+.md-search__input,
+.md-search__input::placeholder,
+.md-sidebar,
+.md-typeset h1,
+.md-search-result__link,
+[data-md-toggle="search"]:checked ~ .md-header .md-search__input {
+  color: var(--md-typeset-color);
+}
+
+.md-header,
+.md-nav--primary .md-nav__title[for="__drawer"] {
+  color: var(--gog-header-color);
+  background-color: var(--gog-header-bg-color);
+}
+
+.md-header__title,
+.md-nav__title {
+  font-weight: 900;
+}
+
+.md-search__form,
+.md-search__input {
+  border-radius: 10px;
+  color: inherit;
+  background-color: var(--gog-search-bg-color);
+}
+
+.md-tabs,
+.md-footer-nav {
+  color: var(--gog-menu-color);
+  background-color: var(--gog-menu-bg-color);
+}
+
+.md-footer-nav__link:focus,
+.md-footer-nav__link:hover {
+  opacity: 0.4;
+}
+
+.md-footer-meta{
+  background-color: #0C0D0D;
+/*  color: white; */
+}
+
+html .md-footer-meta.md-typeset a:hover{
+  color: #f2f2f2;
+}
+html .md-footer-meta.md-typeset a:focus{
+  color: #f2f2f2;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+    font-weight: 900;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  color: var(--md-typeset-color);
+}
+
+/* .md-typeset .info > .admonition-title, */
+.md-typeset .info > summary,
+/* .md-typeset .todo > .admonition-title, */
+.md-typeset .todo > summary {
+  background-color: var(--md-default-fg-color--light);
+}
+
+th {
+  font-weight: 900;
+}

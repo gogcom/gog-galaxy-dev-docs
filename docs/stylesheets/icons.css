@@ -1,0 +1,30 @@
+.icon--Introduction {
+  color: var(--gog-Introduction-icon-color);
+}
+.icon--Glossary {
+  color: var(--gog-Glossary-icon-color);
+}
+.icon--QuickStart {
+  color: var(--gog-QuickStart-icon-color);
+}
+.icon--ReleasingGame {
+  color: var(--gog-ReleasingGame-icon-color);
+}
+.icon--DeveloperPortal {
+  color: var(--gog-DeveloperPortal-icon-color);
+}
+.icon--GamesInDevelopment {
+  color: var(--gog-GamesInDevelopment-icon-color);
+}
+.icon--BuildCreator {
+  color: var(--gog-BuildCreator-icon-color);
+}
+.icon--PipelineBuilder {
+  color: var(--gog-PipelineBuilder-icon-color);
+}
+.icon--SDK {
+  color: var(--gog-SDK-icon-color);
+}
+.icon--FAQ {
+  color: var(--gog-FAQ-icon-color);
+}

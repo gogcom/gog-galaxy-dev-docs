@@ -1,0 +1,3 @@
+# Packages
+
+Every single package is a complete game that will be deployed to end-users taking into account language of their choice and their OS architecture. The number of packages can be changed in the *Languages* and *Architecture* sections of *Project Properties* window. When preparing packages, you have to define which depots and tasks should be put together to create a certain build of your game as shown in the following articles.
