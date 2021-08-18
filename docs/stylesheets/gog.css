@@ -133,7 +133,10 @@
 .md-search__form,
 .md-search__input {
   border-radius: 10px;
-  color: inherit;
+}
+
+.md-search__form,
+.md-search__form:hover {
   background-color: var(--gog-search-bg-color);
 }
 

@@ -11,7 +11,7 @@ In the table below you will find some additional information on popular game eng
 | CRYENGINE           | C++, C#                              | Native support                                               |
 | Game Maker Studio 2 | GameMaker Language (GML)             | An open source wrapper for the GOG GALAXY SDK v1.113.3 created by Vadim Dyachenko (YellowAfterlife) available on his [GitHub repository](https://github.com/GameMakerDiscord/GOG.gml) |
 | RPG Maker           | Javascript                           | No support                                                   |
-| Amazon Lumberyard   | Lua                                  | C++ components can be added using [“gems”](https://docs.aws.amazon.com/lumberyard/latest/userguide/component-entity-system-pg-gems-code.htmlGodotGDScript) |
+| Amazon Lumberyard   | Lua                                  | C++ components can be added using [“gems”](https://docs.aws.amazon.com/lumberyard/latest/userguide/component-entity-system-pg-gems-code.html) |
 | Godot               | GDScript, NativeScript,Visual Script | C++ components can be added using [“modules”](http://docs.godotengine.org/en/latest/development/cpp/custom_modules_in_cpp.html) |
-| Visionaire Studio   | Lua                                  | Official GOG GALAXY SDK support: see commands containing *GameClient* |
+| Visionaire Studio   | Lua                                  | Official support: see the [`getProperty`](https://wiki.visionaire-tracker.net/wiki/GetProperty) command and commands containing *GameClient* in the [Visionaire Studio documentation](https://wiki.visionaire-tracker.net/wiki/Player_Commands) |
 

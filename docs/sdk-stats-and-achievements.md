@@ -48,4 +48,4 @@ During development, you might be interested in clearing achievements progress fo
 - Have you set up appropriate listeners properly?
 - Have you set up error handling? It is possible to catch errors within the Galaxy SDK methods or use the [`GetError()`](https://docs.gog.com/galaxyapi/group__api.html#ga11169dd939f560d09704770a1ba4612b) method to check if any errors occurred.
 
-For more information about Achievements and their related GOG GALAXY SDK methods, please visit the [GOG GALAXY SDK API documentation](https://devportal.gog.com/galaxy/components/sdk/latest_documentation).
+For more information about Achievements and their related GOG GALAXY SDK methods, please visit the [GOG GALAXY SDK API documentation](https://docs.gog.com/galaxyapi).

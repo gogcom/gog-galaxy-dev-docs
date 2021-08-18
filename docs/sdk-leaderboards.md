@@ -43,4 +43,4 @@ To retrieve leaderboard entries, for example to display them in game, you may us
 
 Please remember that all these calls are asynchronous and responses indicating their success or failure will come to [`LeaderboardsRetrieveListener`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1ILeaderboardsRetrieveListener.html).
 
-For more detailed information about Leaderboards and their related GOG GALAXY SDK methods, please visit the [GOG GALAXY SDK API documentation](https://devportal.gog.com/galaxy/components/sdk/latest_documentation).
+For more detailed information about Leaderboards and their related GOG GALAXY SDK methods, please visit the [GOG GALAXY SDK API documentation](https://docs.gog.com/galaxyapi).

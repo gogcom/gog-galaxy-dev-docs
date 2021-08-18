@@ -43,6 +43,21 @@ If you want to provide localized names for leaderboards in your game, you can do
 
 3. Enter the localized version of a name for a particular leaderboard (all other fields and options are unavailable for editing).
 
-4. Make sure to click the blue *Save* button for each localized leaderboard.
+4. Please make sure to click the blue *Save* button for each localized leaderboard.
 
 5. If you want to create more localizations, just repeat the above steps. When you’re done, click the blue *Back* button at the top of the screen to return to the main *Leaderboards* screen.
+
+## Searching Leaderboards
+
+When there’s a need to find a particular user and edit their score or remove them altogether from a leaderboard, please use the *Search* button:
+
+![Leaderboards Search](_assets/leaderboards-search.png)
+
+You can search users by their usernames in a given leaderboard or in all leaderboards. If no specific username is used, then all users will be listed.
+
+With the search results displayed, you can sort them by score or filter by a leaderboard type and then edit or remove individual entries:
+
+![Leaderboards Search Results](_assets/leaderboards-search-results.png)
+
+
+
