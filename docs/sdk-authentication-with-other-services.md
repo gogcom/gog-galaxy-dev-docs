@@ -87,9 +87,9 @@ In order to integrate a PS4 account with the GOG GALAXY SDK, you should configur
     The *clientID* should be in the following format (the same ID should be passed to the [`SignInPS4`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#a820d822d8e344fdecf8870cc644c7742) method from the next paragraph):
 
     `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
-
+    
     The *clientSecret* should be in the following format:
-
+    
     `xxxxxxxxxxxxxxxx`
 
 ### Authorization
@@ -109,10 +109,6 @@ When applying for a PS certification, bear in mind these rules:
 ## Xbox One / Xbox Live
 
 ### Configuring Xbox Live Service
-
-The GOG backend still relies on a legacy *User Pairwise ID (upi)* token when handling authentication requests. Please make sure your relying party is configured to provide this information:
-
-![XBOX Authentication: Adding upi](_assets/sdk-xbox-add-pairwise-id.png)
 
 1. Generate a Business Partner Certificate and a Relying Party Certificate (please consult Xbox Developer support on how to do that).
 
@@ -145,17 +141,21 @@ The GOG backend still relies on a legacy *User Pairwise ID (upi)* token when han
 
 5. Send a request to your GOG Product Manager with the following information allowing us to bind your game with our ClientID:
 
-    - generated Relying Party Certificate
+    - generated Relying Party Certificate along with its password
 
-    - generated Business Partner Certificate
+    - generated Business Partner Certificate along with its password
 
     - title_id
 
     - title_product_id
 
-    - SCID
+    - Sandbox ID
 
 6. In case of Xbox Live, you need to obtain an Xbox Secure Token Service (XSTS) token by following [these instructions](https://docs.microsoft.com/en-us/gaming/xbox-live/features/custom-services/single-sign-on/live-single-sign-on).
+
+The GOG backend still relies on a legacy *User Pairwise ID (upi)* token when handling authentication requests. Please make sure your relying party is configured to provide this information:
+
+![XBOX Authentication: Adding upi](_assets/sdk-xbox-add-pairwise-id.png)
 
 After that, the backend setup is complete.
 
