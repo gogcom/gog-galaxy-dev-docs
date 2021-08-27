@@ -85,11 +85,11 @@ In order to integrate a PS4 account with the GOG GALAXY SDK, you should configur
 
 !!! Info
     The *clientID* should be in the following format (the same ID should be passed to the [`SignInPS4`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#a820d822d8e344fdecf8870cc644c7742) method from the next paragraph):
-    
+
     `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
-    
+
     The *clientSecret* should be in the following format:
-    
+
     `xxxxxxxxxxxxxxxx`
 
 ### Authorization
@@ -110,9 +110,13 @@ When applying for a PS certification, bear in mind these rules:
 
 ### Configuring Xbox Live Service
 
+The GOG backend still relies on a legacy *User Pairwise ID (upi)* token when handling authentication requests. Please make sure your relying party is configured to provide this information:
+
+![XBOX Authentication: Adding upi](_assets/sdk-xbox-add-pairwise-id.png)
+
 1. Generate a Business Partner Certificate and a Relying Party Certificate (please consult Xbox Developer support on how to do that).
 
-2. Log in to Xbox Developer Portal.
+2. Log in to the Xbox Developer Portal.
 
 3. In the Web Services section, create a new WebService.
 
@@ -191,7 +195,7 @@ for (int i = 0; i < Windows::Xbox::System::User::Users->Size; ++i, loggedInUser 
     if (loggedInUser->IsSignedIn)
         break;
 }
- 
+
 if (!loggedInUser)
 {
     Logger::Log("SignInXB1: there is no logged in user");
