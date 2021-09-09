@@ -9,17 +9,17 @@ Before working with achievements, you must define them in the  [Developer Portal
 Alternatively, if you have all achievements already deployed on Steam, you can import them to GOG Developer Portal by following this [guide](sdk-steam-import.md).
 
 !!! Important
-    When working with GOG GALAXY stats or/and achievements, please remember to have them retrieved first with [`RequestStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a38f5c146772f06dfd58c21ca599d7c25), and that you have to call the [`StoreStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a0e7f8f26b1825f6ccfb4dc26482b97ee) function after changing a statistic value or achievement state to make this change persistent (see the section below).
+    When working with GOG GALAXY stats or/and achievements, please remember to have them retrieved first with [`RequestUserStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a38f5c146772f06dfd58c21ca599d7c25), and that you have to call the [`StoreStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a0e7f8f26b1825f6ccfb4dc26482b97ee) function after changing a statistic value or achievement state to make this change persistent (see the section below).
 
 ## Setting a User Achievement/Statistic
 
 To unlock an achievement or change a statistic value, you need three methods:
 
-1. [`IStats::RequestStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a38f5c146772f06dfd58c21ca599d7c25) — to retrieve user’s statistics and achievements.
+1. [`IStats::RequestUserStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a38f5c146772f06dfd58c21ca599d7c25) — to retrieve user’s statistics and achievements.
 2. [`IStats::SetAchievement()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#aa5f8d8f187ae0870b3a6cb7dd5ab60e5) or `IStats::`[`SetStatFloat()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#ab6e6c0a170b7ffcab82f1718df355814)/[`SetStatInt()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#adefd43488e071c40dc508d38284a1074) — to unlock achievements and set statistics values, respectively. Achievement name provided as an argument to the `SetAchievement()` function is the same as the one specified in the *“API_KEY”* field in the Developer Portal.
 3. [`IStats::StoreStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a0e7f8f26b1825f6ccfb4dc26482b97ee) — this method pushes information about unlocked achievements and changed stats to the GOG GALAXY backends.
 
-Before calling the `Set` or `Store` methods, please remember to wait until success response comes from `RequestStatsAndAchievements()` to [`UserStatsAndAchievementsRetrieveListener`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUserStatsAndAchievementsRetrieveListener.html).
+Before calling the `Set` or `Store` methods, please remember to wait until success response comes from `RequestUserStatsAndAchievements()` to [`UserStatsAndAchievementsRetrieveListener`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUserStatsAndAchievementsRetrieveListener.html).
 
 ## Offline Achievements and Statistics
 
@@ -42,7 +42,7 @@ During development, you might be interested in clearing achievements progress fo
 
 ## Setting Up Achievements Does Not Work — What Should I Do?
 
-- Have you called [`RequestStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a38f5c146772f06dfd58c21ca599d7c25) and waited for a callback to its listener before calling any other achievement methods?
+- Have you called [`RequestUserStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a38f5c146772f06dfd58c21ca599d7c25) and waited for a callback to its listener before calling any other achievement methods?
 - Have you called [`StoreStatsAndAchievements()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#a0e7f8f26b1825f6ccfb4dc26482b97ee) after calling [`SetAchievement()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#aa5f8d8f187ae0870b3a6cb7dd5ab60e5) to commit the changes?
 - Are you calling [`ProcessData()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga1e437567d7fb43c9845809b22c567ca7) frequently enough?
 - Have you set up appropriate listeners properly?

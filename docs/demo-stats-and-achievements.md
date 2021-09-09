@@ -79,6 +79,6 @@ The [`OnAchievementUnlocked()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1ap
 
 ## General Remarks
 
-- Keep in mind that it’s important to call `RequestStatsAndAchievements()` before calling any other method related to achievements and statistics. However, you need to request them only once per game run.
+- Keep in mind that it’s important to call `RequestUserStatsAndAchievements()` before calling any other method related to achievements and statistics. However, you need to request them only once per game run.
 - In order to send information about an achievement or statistic being set to the GOG GALAXY backend, you need to call the `StoreStatsAndAchievements()` method. In this demo, we call it within every **Set** method, but if you intend to have a large number of statistics with their values changing often, you should consider calling `StoreStatsAndAchievements()` from time to time, and also when the player quits the game.
 - Operations that deal with setting and storing user stats and achievements are performed every time a user is logged in to the GOG GALAXY client — even if they are offline at the time. In such case, relevant data is stored locally and will be sent to the backend the next time the user runs the game while logged in and online. As a result, any achievement unlocked while in offline mode will show up in the GOG GALAXY client.
