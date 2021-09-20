@@ -26,6 +26,9 @@ To add a new achievement:
 
 5. Click the green *Add* button.
 
+!!! Important "Save Changes Before Adding a New Achievement"
+    Any newly added achievement is saved immediately and the page is reloaded, thus discarding all changes that were not saved with the green *Save All* button prior to adding this achievement.
+
 ## Editing an Existing Achievement
 
 It’s done exactly as with adding a new achievement, only without steps #1 and #5, obviously.
