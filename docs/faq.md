@@ -289,17 +289,15 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
     Try renaming *libGalaxyCSharpGlue.dylib* to *GalaxyCSharpGlue.bundle*.
 
-4. **GOG GALAXY does not work for me inside the Unity debugger.**
+4. **GOG GALAXY does not work for me inside the Unity debugger or in Unity standalone builds.**
 
-    You have to put the GOG GALAXY libraries in the appropriate directory. You can achieve this by using [the linked script](http://cdn.gog.com/open/galaxy/sdk/Unity/RedistInstall.cs). It might be necessary to modify the script to match your application structure.
+    GOG GALAXY SDK Unity Package should take care of placing the required libraries in their place both when using the editor and when building a standalone game. GOG GALAXY SDK Unity package can be found on our [Developer Portal](https://devportal.gog.com/galaxy/components/sdk).
+
+    If you are using the GOG GALAXY SDK Unity package and the GOG GALAXY API is not available in the Unity editor, please make sure that the *Galaxy.dll* or *Galaxy64.dll* file is in the project’s root folder.
 
 5. **GOG GALAXY throws an exception when calling the `Init()` method after stopping and starting the Unity3d debugger.**
 
     It is because `Shutdown()` is not called by Unity when the application is being stopped. You can fix this by adding calling `GalaxyInstance.Shutdown()` in `OnDestroy/Dispose` methods. Note that before calling `Shutdown()`, all the listeners should be disposed of.
-
-6. **GOG GALAXY does not work for me in Unity standalone builds.**
-
-    You have to copy the Galaxy libraries to appropriate folders inside the standalone project. You can achieve this by using [the linked script](http://cdn.gog.com/open/galaxy/sdk/Unity/RedistCopy.cs). It might be necessary to modify the script to match your application structure.
 
 ## Overlay
 
