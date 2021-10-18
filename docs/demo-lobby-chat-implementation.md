@@ -10,7 +10,7 @@ We want the players to be able to communicate with each other while in the same 
 
 GOG GALAXY SDK methods for sending and reading lobby messages are gathered in the **Matchmaking** class. However, the **LobbyMessageListenerChat** listener is initialized separately in **Matchmaking.LobbyEnteredListenerBrowsing.OnLobbyEntered** in the event of successfully entering a lobby, or in **Matchmaking.LobbyCreatedListener.OnLobbyCreated** in the event of successfully creating a lobby (both listeners are defined in the **Matchmaking** class available at *Assets/Scripts/GalaxyManager/Features/Matchmaking.cs*).
 
-Lobby messages can be sent from the input box in the lobby view and during an online multiplayer match (pressing the **T** key displays the input box). All messages are shown for both players in the lobby. Actions of reading and sending message from the chat input field, as well as displaying them, are executed by the **ChatController** script (available at *Assets/Scripts/UI/MultiScene/ChatController.cs*) attached to the **OnlineChat** GameObject in the game.
+Lobby messages can be sent from the input box in the lobby view and during an online multiplayer match (pressing the ++t++ key displays the input box). All messages are shown for both players in the lobby. Actions of reading and sending message from the chat input field, as well as displaying them, are executed by the **ChatController** script (available at *Assets/Scripts/UI/MultiScene/ChatController.cs*) attached to the **OnlineChat** GameObject in the game.
 
 ### Methods and Usage
 
@@ -30,7 +30,7 @@ The **Matchmaking** script is attached to the **GalaxyManager** GameObject when 
     }
 ```
 
-This method is called when the player clicks the *Send message* button in the pre-game lobby, or opens the chat prompt by pressing the **T** key and hits **Enter** while in a match. The text from the `messagePrompt` InputField is assigned to the `message` variable. If the message is not empty (which can happen, when the user presses **Enter** when there is no text in the `messagePrompt`), it is sent by `Matchmaking.SendLobbyMessage(lobbyID, message)` and the text in the input box is cleared.
+This method is called when the player clicks the *Send message* button in the pre-game lobby, or opens the chat prompt by pressing the ++t++ key and hits ++enter++ while in a match. The text from the `messagePrompt` InputField is assigned to the `message` variable. If the message is not empty (which can happen, when the user presses ++enter++ when there is no text in the `messagePrompt`), it is sent by `Matchmaking.SendLobbyMessage(lobbyID, message)` and the text in the input box is cleared.
 
 A callback then comes to `Matchmaking.LobbyMessageListenerChat()`, and the `OnLobbyMessageReceived()` method is called.
 

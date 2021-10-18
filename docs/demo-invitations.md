@@ -53,4 +53,4 @@ This listener callback `OnGameJoinRequested` is triggered when a user is in game
 
 ```
 
-This listener callback `OnGameInvitationReceived` is triggered when a user receives a game invitation. We don’t use this feature in our project, but you can use this callback to display an in-game pop-up for the user, when a game invitation is received. We opted for handling the game invitations via the [GOG GALAXY Overlay](gc-overlay.md), which is accessible at all times with **Shift+Tab**.
+This listener callback `OnGameInvitationReceived` is triggered when a user receives a game invitation. We don’t use this feature in our project, but you can use this callback to display an in-game pop-up for the user, when a game invitation is received. We opted for handling the game invitations via the [GOG GALAXY Overlay](gc-overlay.md), which is accessible at all times with ++shift+tab++.

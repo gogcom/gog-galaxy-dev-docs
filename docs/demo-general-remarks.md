@@ -34,7 +34,7 @@ In our scheme, every class is divided into 5 regions:
 
 ![Debug Menu](_assets/demo-debug-menu.png)
 
-At any point during the game, you can open *Debug Menu* by pressing **F9**. *Debug Menu* allows you to call many of the Galaxy SDK methods from anywhere in the game. The result of the call will be shown in the **Console**, which is also available from *Debug Menu*. The menu was created for testing and debugging purposes, and contains several sections:
+At any point during the game, you can open *Debug Menu* by pressing ++f9++. *Debug Menu* allows you to call many of the Galaxy SDK methods from anywhere in the game. The result of the call will be shown in the **Console**, which is also available from *Debug Menu*. The menu was created for testing and debugging purposes, and contains several sections:
 
 | **Section**      | Function                                                     |
 | ---------------- | ------------------------------------------------------------ |

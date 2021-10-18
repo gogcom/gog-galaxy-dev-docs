@@ -2,13 +2,13 @@
 
 ## Overview
 
-The GOG GALAXY Overlay can be displayed in a game after pressing **Shift+Tab** keys, and it allows players to use a bunch of cool features while playing a game:
+The GOG GALAXY Overlay can be displayed in a game after pressing ++shift+tab++ keys, and it allows players to use a bunch of cool features while playing a game:
 
 - Managing their friends list
 - Chatting with friends
 - Sending and receiving invites to a multiplayer game (if a game allows it)
-- Taking screenshots (**F12** key)
-- Displaying the FPS counter (toggled with **Ctrl+Shift+Tab** keys)
+- Taking screenshots (++f12++ key)
+- Displaying the FPS counter (toggled with ++ctrl+shift+tab++ keys)
 - Receiving notifications about unlocking a game achievement.
 
 By default, the overlay is enabled in the GOG GALAXY client, but can be disabled in the application settings by the user:
@@ -42,7 +42,7 @@ However, if you would like to test the overlay before we enable it globally, you
 
 4. Save the file and restart the GOG GALAXY client.
 
-Now you can run your game and test the overlay by pressing **Shift+Tab**, even if it is not enabled globally.
+Now you can run your game and test the overlay by pressing ++shift+tab++, even if it is not enabled globally.
 
 !!! Important
     Please remember that the overlay works only when a game was launched by clicking the *Play* button in the GOG GALAXY client by a logged in user with a valid game license. Of course, the overlay has to be enabled in the GOG GALAXY client (see the screenshot above).

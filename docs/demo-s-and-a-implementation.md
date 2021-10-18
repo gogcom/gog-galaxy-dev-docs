@@ -12,7 +12,7 @@ The goal is to unlock a particular achievement after a user performs a specific 
 
 The `SetAchievement()` method is responsible for unlocking achievements. Achievements can be unlocked on various occasions and across different game modes, so this method is used in a number of different scripts: **GameManager**, **Local1PlayerGameManager**, **Local2PlayerGameManager** and **Online2PlayerGameManager** (they can be found under *Assets/Scripts/GameManager*).
 
-It is also possible to unlock every achievement from [*Debug Menu*](demo-general-remarks.md#debug-menu) available in game (press **F9** to show the Debug Menu screen, click the *Achievements* button, choose an achievement to set, and click the *SetAchievement* button).
+It is also possible to unlock every achievement from [*Debug Menu*](demo-general-remarks.md#debug-menu) available in game (press ++f9++ to show the Debug Menu screen, click the *Achievements* button, choose an achievement to set, and click the *SetAchievement* button).
 
 ### Methods and Usage
 
@@ -69,7 +69,7 @@ The goal here is to set a proper value of a relevant user statistic after the us
 
 There are two GOG GALAXY SDK methods specific for each statistic type: [`SetStatInt()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#adefd43488e071c40dc508d38284a1074) and [`SetStatFloat()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IStats.html#ab6e6c0a170b7ffcab82f1718df355814). There is no difference between them in the way they work, it’s just different types of stats they deal with. Just like with achievements, particular statistics are set at specific moments in the game, so the `SetStatInt()` and `SetStatFloat()` methods are used across a number of scripts related to gameplay: **GameManager**, **Local1PlayerGameManager**, **Local2PlayerGameManager** and **Online2PlayerGameManager**.
 
-It’s also possible to set every statistic from the in-game [*Debug Menu*](demo-general-remarks.md#debug-menu) (press **F9** to show Debug Menu screen, click the *Statistics* button, choose the desired statistic and click the *SetStatInt* or *SetStatFloat* button).
+It’s also possible to set every statistic from the in-game [*Debug Menu*](demo-general-remarks.md#debug-menu) (press ++f9++ to show Debug Menu screen, click the *Statistics* button, choose the desired statistic and click the *SetStatInt* or *SetStatFloat* button).
 
 ### Methods and Usage
 
