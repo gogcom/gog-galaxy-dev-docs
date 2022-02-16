@@ -1,4 +1,4 @@
-# DLCs and Extras
+# DLCs, Extras & Demos
 
 After receiving a request from you for setting up a downloadable content (DLC) or multiple DLCs for your game, your Product Manager may ask you if the DLC is in-game or if it consists of additional content such as an artbook or soundtrack.
 
@@ -21,3 +21,6 @@ This includes items such as artbooks, soundtracks, wallpapers, avatars, etc. Ple
 
 ![Extras in the Client](_assets/extras2.png)
 
+## Demo
+
+If you want to have a Demo of your game available on GOG, we need to set up a separate SKU for that. Please contact your Product Manager for the product ID. You will later need to upload the demo build the same way you uploaded the main game.

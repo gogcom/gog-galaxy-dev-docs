@@ -24,6 +24,10 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
     DLCs are either bundled with your base game during preparing game build in Build Creator or Pipeline Builder, or uploaded and released independently. See [*DLCs and Extras*](dlc-and-extras.md) and contact your GOG Product Manager.
 
+4. **I have a demo version of my game. How can I set it up on GOG?**
+
+    We need to set up a separate SKU for that. Please contact your Product Manager and ask about it. You will need to upload the demo build the same way you uploaded the main game.
+
 ## General SDK Questions
 
 1. **How can I invite my team members to the Devportal?**
