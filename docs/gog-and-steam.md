@@ -163,3 +163,7 @@ Moreover, the GOG GALAXY SDK has two ways of checking whether any packets are av
 ## GameServer
 
 As mentioned in Multiplayer section, game hosts in GOG GALAXY are not publicly available: their IP addresses are not exposed and the communication is based on GalaxyID. Therefore, all Steamworks methods related to GameServers, e.g. for setting map names (`ISteamGameServer::SetMapName`, `ISteamGameServer::SetServerName`), favorite game server, a friend’s game server etc., have no counterparts in the GOG GALAXY SDK.
+
+## The Easy Way: Steam SDK Wrapper (Beta)
+
+If you have a Steam build of your game and don’t want to deal with the code anymore, you can use our quick solution called Steam SDK Wrapper (Beta). It will allow you to port basic Steam functionalities to GOG within minutes. More on this in the [next article](steam-sdk-wrapper.md).
