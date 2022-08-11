@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and Steam that make porting Steam builds of your game to GOG a bit painful and time consuming. But if you already have a Steam version of your product, you can get it up and running on our platform within minutes, not hours. No replacing one API methods with another in the code — all you need is to use our Steam SDK Wrapper (Beta).
+As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and Steam. With this tool we aim to decrease the time needed to implement additional features on GOG. If you already have a Steam version of your product, you can get it up and running on our platform within minutes, not hours. No replacing one API methods with another in the code — all you need is to use our Steam SDK Wrapper (Beta).
 
 Steam SDK Wrapper (Beta) is a middle layer that intercepts Steam API calls and translates them into calls that can be understood by the GOG backends. Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, Steam SDK Wrapper (Beta) allows to use the following features out of the box:
 
@@ -20,19 +20,20 @@ It's a special case that could imply game's code changes.
 ## Implementation
 
 1. Make sure you’re using a [supported Steam API version](#supported-steam-api-versions).
-2. Download [Steam SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
-3. Add Steam SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
+2. Add achievements to DevPortal, ideally using the [VDF file from Steam](https://docs.gog.com/sdk-steam-import/?h=vdf).
+3. Download [Steam SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
+4. Add Steam SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
     1. Rename file *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your game build 
     2. Recompile your game linking against *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].lib*
-4. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll*
-5. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
-6. Your build is now ready to upload to Devportal
+5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll*
+6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
+7. Your build is now ready to upload to Devportal
 
 ## Supported Steam API Versions
 
 Steam SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
-- **1.32** *to* **1.48** *and* **1.50** *to* **1.53**
+- **1.32** to **1.53**
 
 If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to Steam SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version. Whichever you choose, you can find the list of all Steamworks releases [here](https://partner.steamgames.com/downloads/).
 
@@ -42,7 +43,7 @@ In order for Steam SDK Wrapper (Beta) to know the [SDK credentials](https://docs
 
 ### client_code
 
-Plaintext `client_secret` can be used for testing purposes, but it is recommended to use `client_code` instead when releasing. `client_code` is an encrypted version of `client_secret`. You can obtain it by contacting Dev Support by adding a [ticket](https://galaxy-support.gog.com/hc/en-us/requests/new) or sending an email at support@developer.gog.com.
+Plaintext `client_secret` can be used for testing purposes, but it is recommended to use `client_code` instead when releasing. `client_code` is an encrypted version of `client_secret`. You can obtain it by accessing SDK credentials in the [games menu](https://devportal.gog.com/panel/games).
 
 ### Minimal Config Example
 ```json
