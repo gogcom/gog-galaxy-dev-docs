@@ -4,6 +4,18 @@ This development kit is available on our [GOG GALAXY Developer Portal](https://d
 
 The GOG GALAXY SDK is compatible with the [GOG GALAXY client](gc-client-overview.md) and the [GOG GALAXY overlay](gc-overlay.md). The GOG GALAXY client will display all of the unlocked achievements, and the overlay will display a notification whenever you unlock the achievement in a game. The overlay can also be used to send and receive invitations to online multiplayer games.
 
+## Steam SDK Wrapper (Beta)
+
+Steam SDK Wrapper (Beta) is a middle layer that intercepts Steam API calls and translates them into calls that can be understood by the GOG backends. Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, Steam SDK Wrapper (Beta) allows to use the following features out of the box:
+
+* achievements,
+* leaderboards,
+* stats,
+* friends.
+
+More info on the tool can be found [here](https://docs.gog.com/steam-sdk-wrapper/).
+
+
 ## DRM and SDK
 
 One of the main features of games available on GOG.com is that they are provided DRM-free. This was taken into consideration when creating both the GOG GALAXY client and the SDK. The GOG GALAXY SDK provides many of its features even when the user is not signed in, or when the Internet connection is disabled. For example, when the Internet connection is not available, players are not able to host or join online games, but they still can unlock achievements, set their statistics or leaderboard scores. All changes that were made while offline are stored locally on users’ machines and are uploaded to the GOG backend once an Internet connection is reestablished.

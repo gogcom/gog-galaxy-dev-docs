@@ -23,17 +23,23 @@ It's a special case that could imply game's code changes.
 2. Add achievements to DevPortal, ideally using the [VDF file from Steam](https://docs.gog.com/sdk-steam-import/?h=vdf).
 3. Download [Steam SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
 4. Add Steam SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
-    1. Rename file *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your game build 
+    1. Rename *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game 
     2. Recompile your game linking against *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].lib*
 5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll*
 6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
-7. Your build is now ready to upload to Devportal
+7. Your build is now ready to be uploaded to Devportal
+
+### Demo game
+
+You can check our SteamWrapper demo game and its source code for the exact implementation.
+Ask our support for its license (Monke 2: Monke Goes Fishing on GOG.com).
+[Check its source code](https://github.com/gogcom/steam-wrapper-demo-game) and build it yourself.
 
 ## Supported Steam API Versions
 
 Steam SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
-- **1.32** to **1.53**
+- **1.31** *to* **1.53**
 
 If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to Steam SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version. Whichever you choose, you can find the list of all Steamworks releases [here](https://partner.steamgames.com/downloads/).
 
