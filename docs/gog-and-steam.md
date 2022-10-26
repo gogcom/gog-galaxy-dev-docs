@@ -1,6 +1,8 @@
 # Porting Your Games from Steam to GOG
 
-Chances are you already have your game prepared for Valve’s Steam platform. The best option would be to simply push this Steam-ready build to GOG and have all implemented features working out of the box on our platform. Although we strive to make this transition as smooth as possible, the differences between the two platforms are too significant to overcome them with just a few clicks.
+Chances are you already have your game prepared for Valve’s Steam platform.  
+We want to make this transition as smooth as possible, and although there are differences between the two platforms, you can use our [Steam SDK Wrapper (Beta)](https://docs.gog.com/steam-sdk-wrapper/) to implement additional features on GOG in a matter of minutes.  
+Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA) regarding Steam Wrapper as it's extremly important and helps us improve this project.
 
 Here, you will find a list of items that need your attention when trying to adapt an existing Steam build to the GOG environment.
 

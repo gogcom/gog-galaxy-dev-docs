@@ -1,21 +1,37 @@
-# Steam SDK Wrapper (Beta)
 
+# Steam SDK Wrapper (Beta)
+**Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
+Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
 ## Introduction
 
-As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and Steam. With this tool we aim to decrease the time needed to implement additional features on GOG. If you already have a Steam version of your product, you can get it up and running on our platform within minutes, not hours. No replacing one API methods with another in the code — all you need is to use our Steam SDK Wrapper (Beta).
+As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and Steam. With this tool we aim to decrease the time needed to implement additional features on GOG.  
+If you already have a Steam version of your product, you can get it up and running on our platform within minutes, not hours. No API methods need to be replaced in the code — all you need is to use our Steam SDK Wrapper (Beta).
 
-Steam SDK Wrapper (Beta) is a middle layer that intercepts Steam API calls and translates them into calls that can be understood by the GOG backends. Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, Steam SDK Wrapper (Beta) allows to use the following features out of the box:
+**Galaxy SDK API is still available alongside Steam SDK Wrapper functionality** so it's possible to create custom Galaxy SDK init but leave other functionality like stats or leaderboards to Steam Wrapper.
+
+Steam SDK Wrapper (Beta) is a middle layer that intercepts Steam API calls and translates them into calls that can be understood by the GOG backends.  
+Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, Steam SDK Wrapper (Beta) allows to use the following features out of the box:
 
 - achievements,
 - leaderboards,
 - stats,
-- friends.
+- friends,
+- matchmaking (lobby and invites w/o lobby/user data yet)
 
-### Offline mode
+## Offline mode
 
 Games on GOG being DRM-free require that the game is playable even without installed Galaxy Client.
-So it should be possible to play the game even when `SteamAPI_Init` returns `false` which isn't the case for Steam.
-It's a special case that could imply game's code changes.
+Therefore it should be possible to play the game even when `SteamAPI_Init` returns `false` which isn't the case for Steam.  
+It means that in order to ensure that your game and its online features work, **you need to either**:
+ 
+- keep Galaxy Client running 
+
+or 
+
+- allow your game to be able to continue running when `SteamAPI_Init` returns `false` (which will result in disabling its online features).
+
+It's a special case that could imply game's code changes e.g only replace `SteamAPI_Init` section with `galaxy::api::Init`.
+This feature is still being discussed and worked on.
 
 ## Implementation
 
@@ -27,21 +43,22 @@ It's a special case that could imply game's code changes.
     2. Recompile your game linking against *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].lib*
 5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll*
 6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
-7. Your build is now ready to be uploaded to Devportal
+7. Your build (ideally no need for rebuilding if you chose **4.1**) is now ready to be uploaded to DevPortal
 
 ### Demo game
 
-You can check our SteamWrapper demo game and its source code for the exact implementation.
-Ask our support for its license (Monke 2: Monke Goes Fishing on GOG.com).
+You can check our Steam Wrapper demo game and its source code for the exact implementation.
+Ask our support for its license (1931358602 Steam Wrapper Demo Game).
 [Check its source code](https://github.com/gogcom/steam-wrapper-demo-game) and build it yourself.
 
 ## Supported Steam API Versions
 
 Steam SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
-- **1.31** *to* **1.53**
+- **1.31** *to* **1.55**
 
-If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to Steam SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version. Whichever you choose, you can find the list of all Steamworks releases [here](https://partner.steamgames.com/downloads/).
+If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to Steam SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version.  
+Whichever you choose, you can find the list of all SteamWorks releases [here](https://partner.steamgames.com/downloads/).
 
 ## Configuration File
 
@@ -230,7 +247,24 @@ Also SteamTV and SteamVR interfaces are not supported
 
 ### Bindings to other programming languages
 
-As of 1.32 flat API is supported so projects like [Steamworks.NET](https://steamworks.github.io/) or [Facepunch.Steamworks](https://wiki.facepunch.com/steamworks/) should work without and additional tinkering.
+As of 1.32 flat API is supported so projects like [Steamworks.NET](https://steamworks.github.io/) or [Facepunch.Steamworks](https://wiki.facepunch.com/steamworks/) **should** work without and additional tinkering.
 Same goes with other projects that utilizes `steam_api.dll`'s calls to flat API.
 
+As of version 2.3.0 Facepunch.Steamworks moved to using Steam's manual call dispatch instead of running all callbacks at once (`SteamAPI_ManualDispatch` vs `SteamAPI_RunCallbacks`) which is not fully supported in the current SW version.
+
 CSteamworks is not currently supported.
+
+### Game engines
+
+| Game Engine          |                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `Unreal Engine` | both native Steam implementation and EOS seems to work but a little tinkering might be needed. |
+| `Unity` | appears to work without an issue |
+| `Game Maker` | appears to work without an issue |
+| `RenPy` | some issues regarding working directory/dll placemnt has been reported |
+
+Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement.
+We are working on a better approach regarding theses issues.
+
+**Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
+Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
