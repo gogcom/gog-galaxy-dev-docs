@@ -2,6 +2,8 @@
 
 This section describes how language selection is handled in your game.
 
+[Supported languages table](bc-languages-table.md).
+
 ![Languages](_assets/bc-separate-langs.png)
 
 ### No separate language builds
