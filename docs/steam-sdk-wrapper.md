@@ -90,6 +90,22 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 | `require_online`   | bool   | `false`  | Indicates if sign in with GOG GALAXY backend is required |
 | `dlcs`             | array  | `[]`     | Array of DlcInfo struct  `{steam_id:number, name:string, galaxy_id:number}`|
 
+## Unreal Engine
+
+Depending on your Steamworks implementation some changes to Unreal Engine itself might be needed.  
+
+### Native C++
+
+If your Steam implementation is in native C++, it should work like any other game so the default drag & drop method mentioned above should suffice.  
+
+### EOS
+
+When using EOS Online Subsystem Steam and blueprints some changes to the engine itself need to be made.  
+First you need to check which Steamworks version does your version of UE support here: `/YourUnrealEnginePath/Engine/Source/ThirdParty/Steamworks/` and `Steamworks.build.cs`. For UE 4.27 it's Steamv151 so please stick to this version.
+Online Subsystem is a private dependency so by default it is statically linked into your project using `steam_api[64].dll` shipped with the engine thus recompilation is necessary.  
+This implies drag-and-dropping `GalaxySteamWrapper[64].dll` and `Galaxy[64].dll` e.g here `/YourUnrealEnginePath/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]/Win64` replacing the original `steam_api[64].dll` and then recompiling your project.  
+After recompilation, please make sure to ship your package with `GalaxyConfig.json` placed in `YourPacakge/YourProject/Binaries/Win[64]` beside your game's executable file and `Galaxy[64].dll` in `YourPackage/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]`.
+
 ## Methods Implemented
 
 **Note:** Unlisted methods are not implemented.
