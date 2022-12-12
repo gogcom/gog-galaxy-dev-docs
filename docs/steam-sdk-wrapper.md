@@ -90,6 +90,30 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 | `require_online`   | bool   | `false`  | Indicates if sign in with GOG GALAXY backend is required |
 | `dlcs`             | array  | `[]`     | Array of DlcInfo struct  `{steam_id:number, name:string, galaxy_id:number}`|
 
+## Bindings to other programming languages
+
+As of 1.32 flat API is supported so projects like [Steamworks.NET](https://steamworks.github.io/) or [Facepunch.Steamworks](https://wiki.facepunch.com/steamworks/) **should** work without and additional tinkering.
+Same goes with other projects that utilizes `steam_api.dll`'s calls to flat API.
+
+CSteamworks is not currently supported.
+
+### Manual Callback Dispatch
+
+As of version 1.1.2 of SteamWrapper, Steam's manual callback dispatch (instead of running all callbacks at once with `SteamAPI_RunCallbacks` you can dispatch them manually `SteamAPI_ManualDispatch`) is fully supported.  
+Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be possible to use this and later versions with SteamWrapper.
+
+### Game engines
+
+| Game Engine          |                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `Unreal Engine` | both native Steam implementation and EOS seems to work but a little tinkering might be needed. |
+| `Unity` | appears to work without an issue |
+| `Game Maker` | appears to work without an issue |
+| `RenPy` | some issues regarding working directory/dll placemnt has been reported |
+
+Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement.
+We are working on a better approach regarding theses issues.
+
 ## Unreal Engine
 
 Depending on your Steamworks implementation some changes to Unreal Engine itself might be needed.  
@@ -260,27 +284,6 @@ From version 1.32 the flat API functions shipped with Steamworks are supported w
 | `IsFakeIP` |
 
 Also SteamTV and SteamVR interfaces are not supported
-
-### Bindings to other programming languages
-
-As of 1.32 flat API is supported so projects like [Steamworks.NET](https://steamworks.github.io/) or [Facepunch.Steamworks](https://wiki.facepunch.com/steamworks/) **should** work without and additional tinkering.
-Same goes with other projects that utilizes `steam_api.dll`'s calls to flat API.
-
-As of version 2.3.0 Facepunch.Steamworks moved to using Steam's manual call dispatch instead of running all callbacks at once (`SteamAPI_ManualDispatch` vs `SteamAPI_RunCallbacks`) which is not fully supported in the current SW version.
-
-CSteamworks is not currently supported.
-
-### Game engines
-
-| Game Engine          |                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------ |
-| `Unreal Engine` | both native Steam implementation and EOS seems to work but a little tinkering might be needed. |
-| `Unity` | appears to work without an issue |
-| `Game Maker` | appears to work without an issue |
-| `RenPy` | some issues regarding working directory/dll placemnt has been reported |
-
-Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement.
-We are working on a better approach regarding theses issues.
 
 **Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
 Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
