@@ -33,6 +33,7 @@ or
 It's a special case that could imply game's code changes e.g only replace `SteamAPI_Init` section with `galaxy::api::Init`.
 This feature is still being discussed and worked on.
 
+DLC Discovery and Storage interface's methods using local filesystem (FileWrite/FileRead etc.) are still available even without Galaxy Client running and authorization.
 ## Implementation
 
 1. Make sure you’re using a [supported Steam API version](#supported-steam-api-versions).
@@ -41,7 +42,7 @@ This feature is still being discussed and worked on.
 4. Add Steam SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
     1. Rename *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game 
     2. Recompile your game linking against *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].lib*
-5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll*
+5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll* or executable, depending on how working directory and links are handled
 6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
 7. Your build (ideally no need for rebuilding if you chose **4.1**) is now ready to be uploaded to DevPortal
 
