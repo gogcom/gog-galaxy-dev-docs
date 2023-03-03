@@ -312,3 +312,53 @@ For any questions that are not covered by this FAQ, please contact [our support 
 2. **The overlay behaves oddly in some Unity games on macOS. What is the reason?**
 
     Recent changes in Unity make the overlay attach to the wrong process, and — as a result — appear in the wrong window. Unfortunately, we are unable to fix this at the moment.
+
+## Dev Support - Logs
+
+1. **I’m having issues with Build Creator. What should I do?**
+
+    Contact our [support team](mailto:support@developer.gog.com) or through the widget and make sure to attach Build Creator and CSB logs with your request so we can investigate further. 
+
+    Build Creator log files are located in:
+
+     - *%LocalAppData%/GOG.com/BuildCreator/BuildCreator.log* on Windows,
+
+     - *~/Library/Application Support/GOG.com/BuildCreator/BuildCreator.log* on MacOS.
+
+
+    CSB logs should be stored here:
+
+     - *%LocalAppData%\temp\__gog\logs* on Windows,
+
+     - *$TMPDIR/__gog/logs* (type 'open $TMPDIR/__gog/logs' in MacOS terminal) on MacOS.
+
+2. **I’m having troubles with Steam SDK Wrapper(beta)!**
+
+    Please generate logs and send them with your request to our [support team](mailto:support@developer.gog.com). In order to have logs generated, please add the following to the *GalaxyConfg.json*:
+
+    ```
+    {
+    "enable_logs": true,
+    "auth_on_init": true,
+    "require_online": true
+    }
+    ```
+
+    Remember that *GalaxyConfig.json* should be located in the root folder of the game installation directory, next to the game.exe. Afterwards, please reproduce the issue. *SteamWrapper.log* should be generated in the same directory next to the game.exe and GalaxyConfig.json.
+
+    Additionally, you can also generate GalaxyPeer logs. In order to do that, download [GalaxyPeer.ini](https://items.gog.com/GalaxyPeer.zip) and copy-paste it next to the game.exe. Once the .ini file is in place Galaxy SDK will generate a *GalaxyPeer.log* file when the game is running. Please attach this file to your support request.
+
+3. **I’m having issues with Galaxy SDK and I’m not using Steam SDK Wrapper(beta)!**
+
+    Please generate GalaxyPeer logs and send them to our support team. In order to do that, download [GalaxyPeer.ini](https://items.gog.com/GalaxyPeer.zip) and copy-paste it next to the game.exe. Once the .ini file is in place Galaxy SDK will generate a *GalaxyPeer.log* file when the game is running. Make sure to attach this file to your support request.
+
+4. **I can’t download my game using GOG GALAXY!**
+
+    Please recreate the issue and send your GOG Galaxy client log files to our [support team](mailto:support@developer.gog.com), so we can investigate it further.
+
+    The log files can be found here:
+
+     - *C:\ProgramData\GOG.com\Galaxy\logs* on Windows.
+
+     - */Users/Shared/GOG.com/* on Mac.
+
