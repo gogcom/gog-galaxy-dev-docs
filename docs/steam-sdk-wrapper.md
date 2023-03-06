@@ -89,6 +89,7 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 | `port`             | number | `0`      | Local port used for communication with servers and peers |
 | `auth_on_init`     | bool   | `true`   | `SteamAPI_Init` will attempt blocking `SignInGalaxy` |
 | `require_online`   | bool   | `false`  | Indicates if sign in with GOG GALAXY backend is required |
+| `is_unity`         | bool   | `false`  | See Unity section under Game Engines |
 | `dlcs`             | array  | `[]`     | Array of DlcInfo struct  `{steam_id:number, name:string, galaxy_id:number}`|
 
 ## Bindings to other programming languages
@@ -115,9 +116,13 @@ Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be 
 Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement.
 We are working on a better approach regarding theses issues.
 
+## Unity
+
+Depending on your Steamworks implementation (Custom/SteamWorks.NET/Facepunch) you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
+
 ## Unreal Engine
 
-Depending on your Steamworks implementation some changes to Unreal Engine itself might be needed.  
+Depending on your Steamworks implementation some changes to Unreal Engine itself might be needed.
 
 ### Native C++
 
