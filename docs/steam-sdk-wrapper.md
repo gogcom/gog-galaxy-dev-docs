@@ -46,6 +46,16 @@ DLC Discovery and Storage interface's methods using local filesystem (FileWrite/
 6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
 7. Your build (ideally no need for rebuilding if you chose **4.1**) is now ready to be uploaded to DevPortal
 
+Example:
+
+    Game folder
+
+    ![SWGame folder](_assets/steam-wrapper-game-folder.jpg)
+
+    GalaxyConfig.json
+
+    ![SWGame GalaxyConfig.json](_assets/steam-wrapper-galaxy-config.jpg)
+
 ### Demo game
 
 You can check our Steam Wrapper demo game and its source code for the exact implementation.
@@ -119,6 +129,10 @@ We are working on a better approach regarding theses issues.
 ## Unity
 
 Depending on your Steamworks implementation (Custom/SteamWorks.NET/Facepunch) you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
+
+## Godot
+
+If you are using GodotSteam you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
 
 ## Unreal Engine
 
