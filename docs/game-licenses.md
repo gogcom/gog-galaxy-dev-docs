@@ -1,10 +1,8 @@
 # Game Licenses (Keys)
 
-This allows users with user admin privileges to grant all game licenses under the developer account to another user, which can be done with the *Users→Add Licences* option (see image below). They do not require a Developer Portal account to receive the licenses, but they do require a GOG account, which they can create on the [GOG homepage](https://www.gog.com/).
+This allows users with user admin privileges to grant licenses for selected games under the developer account to another user, which can be done with the *Users→Add Licences* option (see image below). They do not require a Developer Portal account to receive the licenses, but they do require a GOG account, which they can create on the [GOG homepage](https://www.gog.com/).
 
 ![Add Game Licenses](_assets/add-licenses.png)
-
-Please note that granting licences to a user gives them access to all games assigned to the developer account at the time the invitation was sent. New games added to the developer account will not be added to users who do not have access to the Developer Portal; you will have to grant licenses to them again.
 
 Please allow up to 15 minutes for the licenses to be added to a user account.
 
@@ -15,6 +13,17 @@ By default, all accounts that are registered under your developer account receiv
 
 !!! Tip "Extra Keys for Your Games"
     If you need keys for certain titles or, for example, would like to test scenarios without DLCs first, you can also ask your PM for a set of generated codes.
+
+## Selection
+
+![Game Licence Selection](_assets/game-licence-selection.png)
+
+ * Use mouse to select desired game(s).
+ * Hold **CTRL** (or **⌘** on OSX) to select multiple titles.
+ * Use **Select All** button to automatically select all games on the list.
+
+!!! Important "Licence for DLC"
+    Granting licence for game will also grant licences for any related DLC. If you want to give licence without DLC or with a specific DLC only you can ask your PM for a set of generated codes.
 
 ## Example
 
