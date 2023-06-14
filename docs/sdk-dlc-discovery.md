@@ -77,7 +77,10 @@ The DLC metadata file — a so-called *mini-manifest* — is generated, when the
 - when a user that owns the DLC in their GOG account installs and updates it using the GOG GALAXY client, or
 - when a user downloads and runs an offline installer for the DLC.
 
-Therefore, provided everything has been set up correctly in your game, it is safe for you to upload a build and publish to the master or public branches before the DLC release, without worrying that a user will have an early access to that DLC.
+Therefore, provided everything has been set up correctly in your game, it is safe for you to upload a build and publish to any **not public** branches before the DLC release.
+
+!!! Attention
+    DLC released as pre-order for an already released game will be accessible for download if published to Master branch before release date.
 
 As with all features of the GOG GALAXY SDK, we are more than happy to conduct implementation tests for the integration of your game. Simply send an email to your GOG Product Manager, letting them know where they can access the build. They will confirm with you that testing has begun, and will follow up afterwards to confirm the results of the tests.
 
