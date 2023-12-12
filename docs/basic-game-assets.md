@@ -8,7 +8,7 @@ In order to publish your game on our platform, we need some basic information ab
 ## Assets Checklist
 
 - **Game DRM-free master build**
-- **Game key art & logo** in at least 1920 x 1080 layered PSD files. [In our assets pack](https://items.gog.com/templates/gog_art_assets.zip) you will find the templates that you can use to create the storefront assets yourself (after unpacking the archive, open the readme file first)
+- **Game key art & logo** in at least 1920 x 1080 layered PSD files. [In our assets pack](https://items.gog.com/templates/gog_art_assets.zip) you will find the templates that you can use to create the storefront assets yourself. The instruction is embedded inside PSD templates.
 - **Game description** (with localized versions) & **system requirements**
 - **Screenshots** (12 is the preferred number; all should have the same aspect ratio)
 - **Trailer** (including the GOG logo on the endslate, or store agnostic). You can download the GOG.com logo pack from [our repository](https://items.gog.com/GOG_logo.zip).
@@ -19,7 +19,7 @@ In order to publish your game on our platform, we need some basic information ab
 ## Other Information
 
 - **SKU breakdown** if you plan to release special/deluxe edition, DLCs, soundtracks, bundles etc.
-- **Price list** and **launch discount.** You can find the template [on our Google Drive](https://drive.google.com/file/d/1VCKCK0PtClDw6HoLtIoiUCGSJU3bsc5g/view?usp=sharing)
+- **Price list** and **launch discount.** You can find the template [here](https://items.gog.com/price_list/gog_price_list.xlsx)
 - Your **approval to generate 30 royalty-free review codes**. The codes will be distributed by our PR team among media and influencers interested in covering your game in their channels
 - **E-mail address** of a person who takes care of **community relations** in your team – we’ll add his/her account to the developers group on our forums.
 
