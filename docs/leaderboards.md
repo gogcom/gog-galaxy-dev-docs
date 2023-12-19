@@ -23,6 +23,9 @@ To add a new leaderboard:
 
 4. Click the green *Add* button.
 
+!!! Attention
+    By default leaderboards should have 'Trusted' option disabled. Additionally, make sure that correct sort method is applied to the leaderboard.
+
 ## Editing an Existing Leaderboard
 
 Editing an existing leaderboard is similar to adding a new leaderboard, only without steps #1 and #4 and on the main *Leaderboards* screen.

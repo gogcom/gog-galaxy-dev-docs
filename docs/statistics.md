@@ -17,13 +17,16 @@ To add a new statistic:
     - *API Key* — a unique key used in your game source code; please note that it shouldn’t contain any special characters except dots (.) and underscores (_)
     - *Name* — the name of the statistic
     - *Type* — we support two types of statistic: **integer** and **float** (please note that each type has its own GOG GALAXY SDK `SetStat()` method)
-    - *Min value* and *Max value* — with these fields you can set a range for a value of a statistic (the default minimum value is 0 and there is no maximum)
+    - *Min value* and *Max value* — with these fields you can set a range for a value of a statistic (the default minimum value is 0)
     - *Default value* — you can pass a value here, if you would like your statistic to have a default value other than 0
     - *Max Change* — sets a limit on the amount that a stat value can change from one update call to the next.
     
 3. Decide on whether the value of a statistic should be *Increment only* — if you check this box, the value cannot be decreased and update calls with values lower than the current one will be ignored.
 
 4. Click the green *Add* button.
+
+!!! Attention
+    Please be advised to not exceed max int value: 2147483647 when setting Max value for a statistic.
 
 ## Editing an Existing Statistic
 
