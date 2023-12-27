@@ -15,4 +15,4 @@ In the table below you will find some additional information on popular game eng
 | Godot               | GDScript, NativeScript,Visual Script | C++ components can be added using [“modules”](http://docs.godotengine.org/en/latest/development/cpp/custom_modules_in_cpp.html) |
 | Visionaire Studio   | Lua                                  | Official support: see the [`getProperty`](https://wiki.visionaire-tracker.net/wiki/GetProperty) command and commands containing *GameClient* in the [Visionaire Studio documentation](https://wiki.visionaire-tracker.net/wiki/Player_Commands) |
 | Defold              | Lua                                  | An open source GOG GALAXY SDK extension created by Marius Petcu (dapetcu21) available on his [GitHub repository](https://github.com/dapetcu21/defold-gog-galaxy). This extension allows developers to implement achievements into Defold-based games |
-
+| Ren'Py              | Python                               | A small ctypes library and a python helper class created by Nur Endah Safitri is available on [VifthFloor Public Repository](https://gitlab.com/vifthfloor-public/renpy-gog/-/tree/master?ref_type=heads) |
