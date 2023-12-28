@@ -43,7 +43,7 @@ DLC Discovery and Storage interface's methods using local filesystem (FileWrite/
     1. Rename *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game 
     2. Recompile your game linking against *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].lib*
 5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll* or executable, depending on how working directory and links are handled
-6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* 
+6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* (some exceptions may apply, please see Unity section below)
 7. Your build (ideally no need for rebuilding if you chose **4.1**) is now ready to be uploaded to DevPortal
 
 Example:
@@ -121,7 +121,7 @@ Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be 
 | `Unreal Engine` | both native Steam implementation and EOS seems to work but a little tinkering might be needed. |
 | `Unity` | appears to work without an issue |
 | `Game Maker` | appears to work without an issue |
-| `RenPy` | some issues regarding working directory/dll placemnt has been reported |
+| `RenPy` | some issues regarding working directory/dll placement has been reported |
 
 Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement.
 We are working on a better approach regarding theses issues.
@@ -129,6 +129,9 @@ We are working on a better approach regarding theses issues.
 ## Unity
 
 Depending on your Steamworks implementation (Custom/SteamWorks.NET/Facepunch) you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
+
+!!! Important
+    Correct placement of the GalaxyConfig.json for Unity games is in the root folder of the game installation directory, next to the game.exe.
 
 ## Godot
 
