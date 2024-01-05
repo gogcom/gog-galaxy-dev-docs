@@ -66,7 +66,7 @@ Ask our support for its license (1931358602 Steam Wrapper Demo Game).
 
 Steam SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
-- **1.31** *to* **1.55**
+- **1.31** *to* **1.58**
 
 If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to Steam SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version.  
 Whichever you choose, you can find the list of all SteamWorks releases [here](https://partner.steamgames.com/downloads/).
@@ -149,8 +149,11 @@ If your Steam implementation is in native C++, it should work like any other gam
 
 When using EOS Online Subsystem Steam and blueprints some changes to the engine itself need to be made.  
 First you need to check which Steamworks version does your version of UE support here: `/YourUnrealEnginePath/Engine/Source/ThirdParty/Steamworks/` and `Steamworks.build.cs`. For UE 4.27 it's Steamv151 so please stick to this version.
+
 Online Subsystem is a private dependency so by default it is statically linked into your project using `steam_api[64].dll` shipped with the engine thus recompilation is necessary.  
+
 This implies drag-and-dropping `GalaxySteamWrapper[64].dll` and `Galaxy[64].dll` e.g here `/YourUnrealEnginePath/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]/Win64` replacing the original `steam_api[64].dll` and then recompiling your project.  
+
 After recompilation, please make sure to ship your package with `GalaxyConfig.json` placed in `YourPacakge/YourProject/Binaries/Win[64]` beside your game's executable file and `Galaxy[64].dll` in `YourPackage/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]`.
 
 ## Methods Implemented
