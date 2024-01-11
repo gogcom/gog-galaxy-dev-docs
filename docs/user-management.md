@@ -10,6 +10,12 @@ If this developer account has more than one game assigned to it, you can invite 
 
 By default, User Admins will have access to all roles on all games. They also have the ability to manage users and invite new ones.
 
+!!! Important
+    Apart from User Admin, you can grant two roles to user:
+
+    - Pipeline: ability to manage game builds.
+    - Licenses: ability to grant game's license. 
+
 *Users→Manage* will let you grant the status of a User Admin to already invited users, changing their role for all games assigned to the developer account:
 
 ![Users Manage](_assets/users-manage.png) 
