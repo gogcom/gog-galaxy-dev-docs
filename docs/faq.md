@@ -313,6 +313,10 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
     Recent changes in Unity make the overlay attach to the wrong process, and — as a result — appear in the wrong window. Unfortunately, we are unable to fix this at the moment.
 
+3. **Overlay doesn't work in Unreal Engine game**
+    
+    Please make sure that the file task is configured properly in the Build Creator. For Unreal Engine games, please read section: *"File Task in Unreal Engine Games"* in the [*Build Creator Quick Start guide*](bc-file-tasks.md).
+
 ## Dev Support - Logs
 
 1. **I’m having issues with Build Creator. What should I do?**
