@@ -317,6 +317,10 @@ For any questions that are not covered by this FAQ, please contact [our support 
     
     Please make sure that the file task is configured properly in the Build Creator. For Unreal Engine games, please read section: *"File Task in Unreal Engine Games"* in the [*Build Creator Quick Start guide*](bc-file-tasks.md).
 
+4. **Overlay doesn't work. Game has multiple executables(not an Unreal Engine game)**
+
+    If the default game.exe is a bootstrapper of some sort that then launches the game executable, please select: 'launcher' category for the default .exe and then select: 'game' category for other executables in the [*Build Creator*](bc-file-tasks.md).
+
 ## Dev Support - Logs
 
 1. **I’m having issues with Build Creator. What should I do?**
