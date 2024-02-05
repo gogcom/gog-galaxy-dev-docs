@@ -15,7 +15,7 @@ Here you will find all the necessary information to start your journey through G
 
 [Releasing Your Game on GOG](release-flow.md){: .md-button .md-button--primary }	[Developer Portal](developer-portal.md){: .md-button .md-button--primary }
 
-[Games in Development](games-in-development.md){: .md-button .md-button--primary }	[Build Creator](bc-quick-start.md){: .md-button .md-button--primary }
+[Early Access](games-in-development.md){: .md-button .md-button--primary }	[Build Creator](bc-quick-start.md){: .md-button .md-button--primary }
 
 [Pipeline Builder](pb-quick-start.md){: .md-button .md-button--primary }	[GOG GALAXY Client](gc-client-overview.md){: .md-button .md-button--primary }
 

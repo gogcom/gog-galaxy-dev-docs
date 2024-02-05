@@ -16,5 +16,5 @@
 
 4. **What happens when my game is ready for a full release?**
 
-    When your game leaves our Games In Development program, it is treated as a new release, with full promotion and featuring of the game on our homepage. The InDev labels and banners are removed by your assigned Product Manager at GOG and any reviews for the game are updated to highlight that they were made when the game was in development. The InDev FAQ is unstickied in the forums, but we leave the thread intact, so that users can read the development history of the game. Should you have any marketing or promotional plans for the full release of your game, please contact our [Marketing team](basic-game-assets.md#contact-us).
+    When your game leaves Early Access, it is treated as a new release, with full promotion and featuring of the game on our homepage. The Early Access labels and banners are removed by your assigned Product Manager at GOG and any reviews for the game are updated to highlight that they were made when the game was in development. The Early Access FAQ is unstickied in the forums, but we leave the thread intact, so that users can read the development history of the game. Should you have any marketing or promotional plans for the full release of your game, please contact our [Marketing team](basic-game-assets.md#contact-us).
 

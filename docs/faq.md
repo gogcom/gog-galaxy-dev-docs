@@ -10,7 +10,7 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
 1. **I want to send a preview build to GOG, how should I do this?**
 
-    Please refer to the [*Games in Development*](games-in-development.md) article for more information.
+    Please refer to the [*Early Access*](games-in-development.md) article for more information.
 
 2. **Do you add your own installer?**
 
