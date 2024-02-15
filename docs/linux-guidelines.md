@@ -6,7 +6,7 @@ The guide is written with the desired “click and run” user experience in min
 
 Before submitting a Linux build to us for release, we strongly recommend that you test your build using a freshly installed Ubuntu 16.04 or 18.04 system (the GOG supported distributions). This will not only prevent the occurrence of many of the issues highlighted in this article, but will also ensure that your game is truly distribution platform agnostic.
 
-Should you have any questions or require any assistance, don’t hesitate to contact us by [submitting a ticket](https://galaxy-support.gog.com/hc/en-us/requests/new) or sending an email to our [Product team](basic-game-assets.md#contact-us).
+Should you have any questions or require any assistance, don’t hesitate to contact us by [submitting a ticket](https://devportal.gog.com/support/contact) or sending an email to our [Product team](basic-game-assets.md#contact-us).
 
 ## 64- and 32-bit Architecture Support
 
