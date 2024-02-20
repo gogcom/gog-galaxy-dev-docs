@@ -14,7 +14,7 @@ Before beginning your tests, it’s important to note that the GOG GALAXY SDK ha
 
 | Status     | Method to Check the Status                                   | Description                                                  |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `SignedIn` | [`galaxy::api::IUser()::SignedIn()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#aa6c13795a19e7dae09674048394fc650) | Determines whether the user has a license for the game and is logged in to the GOG GALAXY client |
+| `SignedIn` | [`galaxy::api::IUser::SignedIn()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#aa6c13795a19e7dae09674048394fc650) | Determines whether the user has a license for the game and is logged in to the GOG GALAXY client |
 | `LoggedOn` | [`galaxy::api::IUser::IsLoggedOn()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#a3e373012e77fd2baf915062d9e0c05b3) | Determines if the user has a license for the game, is logged in to the GOG GALAXY client and is connected to the Internet |
 
 Thus, GOG GALAXY features can work in two modes:
