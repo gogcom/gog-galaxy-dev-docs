@@ -93,10 +93,7 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 | `client_id`        | string | required | ID of the client |
 | `client_secret`    | string | `""`     | Secret of the client (**required** unless `client_code` is specified) |
 | `client_code`      | string | `""`     | Code of the client (**required** unless `client_secret` is specified) |
-| `config_file_path` | string | `"."`    | Path to the folder containing GOG GALAXY configuration files |
-| `storage_path`     | string | `""`     | Path to the folder for storing internal SDK data |
-| `host`             | string | `""`     | Local IP address this peer would bind to |
-| `port`             | number | `0`      | Local port used for communication with servers and peers |
+| `enable_logs`      | bool   | `false`  | Allows to generate GalaxySteamWrapper-specific logs for troubleshooting |
 | `auth_on_init`     | bool   | `true`   | `SteamAPI_Init` will attempt blocking `SignInGalaxy` |
 | `require_online`   | bool   | `false`  | Indicates if sign in with GOG GALAXY backend is required |
 | `is_unity`         | bool   | `false`  | See Unity section under Game Engines |
@@ -133,12 +130,46 @@ Depending on your Steamworks implementation (Custom/SteamWorks.NET/Facepunch) yo
 !!! Important
     Correct placement of the GalaxyConfig.json for Unity games is in the root folder of the game installation directory, next to the game.exe.
 
+### Example placement of Wrapper files in the Unity game
+```
+.
+├── root
+│   └── gameTitle_data/
+│       └── Plugins/
+│           └── x86_64/
+│               ├── Galaxy64.dll (new)
+│               └── steam_api64.dll (replaced with renamed GalaxySteamWrapper64.dll)
+├── GalaxyConfig.json
+├── GalaxySteamWrapper.2021.09.28-09.33.33.log (example log file if logging is enabled)
+└── game.exe
+```
+
 ## Godot
 
 If you are using GodotSteam you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
 
 ## Unreal Engine
 
+### Example placement of Wrapper files in the UE game
+```
+.
+├── root
+│   └── GameTitle/
+│       └── Binaries/
+│           └── Win64/ (working directory in UE4-built game)
+│               ├── GameTitle-Win64-Shipping.exe
+│               ├── GGalaxyConfig.json (new)
+│               └── GalaxySteamWrapper.2021.09.28-09.33.33.log (example log file if logging is enabled)
+└── Engine/
+    └── Binaries/
+        └── ThirdParty/
+            └── Steamworks/
+                └── Steamv139/ (of course number might be different if the game uses different Steamworks version)
+                    └── Win64/
+                        ├── Galaxy64.dll (new)
+                        └── steam_api64.dll (replaced with renamed GalaxySteamWrapper64.dll)
+
+```
 Depending on your Steamworks implementation some changes to Unreal Engine itself might be needed.
 
 ### Native C++
@@ -155,6 +186,21 @@ Online Subsystem is a private dependency so by default it is statically linked i
 This implies drag-and-dropping `GalaxySteamWrapper[64].dll` and `Galaxy[64].dll` e.g here `/YourUnrealEnginePath/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]/Win64` replacing the original `steam_api[64].dll` and then recompiling your project.  
 
 After recompilation, please make sure to ship your package with `GalaxyConfig.json` placed in `YourPacakge/YourProject/Binaries/Win[64]` beside your game's executable file and `Galaxy[64].dll` in `YourPackage/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]`.
+
+### Writing achievements fails (UE4)
+
+Check exactly how achievements are defined in the OSS configuration file in the engine. In case of Nemezis: Mysterious Journey III, achievements were declared in polish-style quotes (“NMJ_FIRST_PUZZLE” instead of "NMJ_FIRST_PUZZLE"). Steamworks offers some support against this, SteamWrapper does not.
+
+## Example placement of Wrapper files in the Misc engine
+```
+.
+├── root
+├── Galaxy.dll (new)
+├── GalaxyConfig.json (new)
+├── GalaxySteamWrapper.2021.09.28-09.33.33.log (example log file if logging is enabled)
+├── Game.exe
+└── steam_api.dll (replaced with renamed GalaxySteamWrapper.dll)
+```
 
 ## Methods Implemented
 
