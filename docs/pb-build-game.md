@@ -35,6 +35,7 @@ GOGGalaxyPipelineBuilder.exe <project_json_file> <optional arguments>
 | Argument                            | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
 | `-h`, `--help`                      | Displays help for the `build-game` command and exits         |
+| `--ignore_list`                     | Path to a text file that consists of newline separated list of files that should be ignored during the process of game building. File names in the text file can use wildcards. For example, *.info will cause the builder to omit files with the .info extension |
 | `--log_level=debug`                 | Enables generating debug logs during command execution; the logs are saved in *C:\Users\<username>\AppData\Local\Temp\__gog\logs* (**Windows**) or *$TMPDIR/__gog/logs* (**macOS**) |
 | `--username USERNAME`               | Username used for authentication to the GOG.com server. If not provided, cached credentials will be used. If there are no cached credentials found, you will be prompted to enter them |
 | `--password PASSWORD`               | Password used for authentication to the GOG.com server. If not provided, cached credentials will be used. If there are no cached credentials found, you will be prompted to enter them |
