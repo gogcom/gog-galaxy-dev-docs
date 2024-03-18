@@ -4,7 +4,7 @@
 
 When you run into any problem, please first update to the [newest version of the GOG GALAXY SDK](https://devportal.gog.com/panel/sdk). Also, please make sure that you are using the latest production version of our [GOG GALAXY client](https://www.gog.com/galaxy) (after installing open it, let it update itself and then sign in). We rely on our users keeping the GOG GALAXY client up to date, as it provides the most important components of the platform.
 
-For any questions that are not covered by this FAQ, please contact [our support team](mailto:support@developer.gog.com), or read the [SDK documentation](sdk.md).
+For any questions that are not covered by this FAQ, please contact [our support team](https://devportal.gog.com/support/contact), or read the [SDK documentation](sdk.md).
 
 ## Builds
 
@@ -40,8 +40,7 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
 3. **I keep getting authorization and/or [`galaxy::api::SignInGalaxy()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#a65e86ddce496e67c3d7c1cc5ed4f3939) errors**
 
-    Make sure you have the necessary privileges (license) for your game in the [User Management](user-management.md) section of the Developer Portal – the GOG GALAXY SDK will not initialize if your account does not have a valid license for the game. If your account is ran by your publisher, please contact its administrator. Please check whether your GOG GALAXY client is running and you are logged in. If your problems persist, please contact [our support team](mailto:support@developer.gog.com).
-
+    Make sure you have the necessary privileges (license) for your game in the [User Management](user-management.md) section of the Developer Portal – the GOG GALAXY SDK will not initialize if your account does not have a valid license for the game. If your account is ran by your publisher, please contact its administrator. Please check whether your GOG GALAXY client is running and you are logged in. If your problems persist, please contact [our support team](https://devportal.gog.com/support/contact)
 4. **What are the `client_id` and `client_secret` parameters and where can I get them for my game?**
 
     `Client_id` is a unique identifier of your game in GOG GALAXY. `Client_id` and `client_secret` are used for initializing GOG GALAXY during the [`galaxy::api::Init()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga7d13610789657b6aebe0ba0aa542196f) call. You can find them in the *SDK Credentials* button for a given game in the *Games* section of the [Developer Portal](developer-portal.md).
@@ -325,24 +324,24 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
 1. **I’m having issues with Build Creator. What should I do?**
 
-    Contact our [support team](mailto:support@developer.gog.com) or through the widget and make sure to attach Build Creator and CSB logs with your request so we can investigate further. 
+    Contact our [support team](https://devportal.gog.com/support/contact) through the widget and make sure to attach Build Creator and CSB logs with your request so we can investigate further. 
 
     Build Creator log files are located in:
 
-     - *%LocalAppData%/GOG.com/BuildCreator/BuildCreator.log* on Windows,
+     -  `%LocalAppData%/GOG.com/BuildCreator/BuildCreator.log` on Windows,
 
-     - *~/Library/Application Support/GOG.com/BuildCreator/BuildCreator.log* on MacOS.
+     -  `~/Library/Application Support/GOG.com/BuildCreator/BuildCreator.log` on MacOS.
 
 
     CSB logs should be stored here:
 
-     - *%LocalAppData%\temp\__gog\logs* on Windows,
+     -  `%LocalAppData%\temp\__gog\logs` on Windows,
 
-     - *$TMPDIR/__gog/logs* (type 'open $TMPDIR/__gog/logs' in MacOS terminal) on MacOS.
+     -  `$TMPDIR/__gog/logs` (type 'open $TMPDIR/__gog/logs' in MacOS terminal) on MacOS.
 
 2. **I’m having troubles with Steam SDK Wrapper(beta)!**
 
-    Please generate logs and send them with your request to our [support team](mailto:support@developer.gog.com). In order to have logs generated, please add the following to the *GalaxyConfg.json*:
+    Please generate logs and send them with your request to our [support team](https://devportal.gog.com/support/contact). In order to have logs generated, please add the following to the *GalaxyConfg.json*:
 
     ```
     {
@@ -362,11 +361,11 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
 4. **I can’t download my game using GOG GALAXY!**
 
-    Please recreate the issue and send your GOG Galaxy client log files to our [support team](mailto:support@developer.gog.com), so we can investigate it further.
+    Please recreate the issue and send your GOG Galaxy client log files to our [support team](https://devportal.gog.com/support/contact), so we can investigate it further.
 
     The log files can be found here:
 
-     - *C:\ProgramData\GOG.com\Galaxy\logs* on Windows.
+     -  `C:\ProgramData\GOG.com\Galaxy\logs` on Windows.
 
-     - */Users/Shared/GOG.com/* on Mac.
+     -  `/Users/Shared/GOG.com/` on Mac.
 
