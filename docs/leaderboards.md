@@ -34,6 +34,9 @@ Editing an existing leaderboard is similar to adding a new leaderboard, only wit
 
 The red *Clear All* button deletes all leaderboard entries permanently. Please use this with caution as the operation cannot be undone.
 
+!!! Attention
+    Wiping entire leaderboard entries is not recommended for released games. We strongly recommend to remove selected invalid scores using 'Search' option instead.
+
 ## Setting Localized Versions of Leaderboards
 
 If you want to provide localized names for leaderboards in your game, you can do it here:
