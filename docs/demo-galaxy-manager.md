@@ -98,6 +98,9 @@ Lastly, two fallbacks are defined: when user authentication failed and when the 
     }
 ```
 
+!!! Note
+    To add other listeners you need to implement the corresponding listener's interface with its methods.
+
 ## Processing Data
 
 Using the `Update()` method, we make sure that **GalaxyManager** processes data on every frame by calling `ProcessData()`. Without it, the listeners won’t work, and neither will any asynchronous functions.
