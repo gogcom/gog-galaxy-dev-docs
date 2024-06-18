@@ -97,7 +97,7 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 | `auth_on_init`     | bool   | `true`   | `SteamAPI_Init` will attempt blocking `SignInGalaxy` |
 | `require_online`   | bool   | `false`  | Indicates if sign in with GOG GALAXY backend is required |
 | `is_unity`         | bool   | `false`  | See Unity section under Game Engines |
-| `dlcs`             | array  | `[]`     | Array of DlcInfo struct  `{steam_id:number, name:string, galaxy_id:number}`|
+| `dlcs`             | array  | `[]`     | Array of DlcInfo struct  `{"steam_id":number, "name":"string", "galaxy_id":number}`|
 | `auth_timeout`     | int    | `15`     | `SignInGalaxy` timeout which is set to 15 by default |
 
 ## Bindings to other programming languages
