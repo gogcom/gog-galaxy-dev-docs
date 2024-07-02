@@ -9,7 +9,7 @@ In the table below you will find some additional information on popular game eng
 | Unity3D             | C#                                   | Native support: the GOG GALAXY SDK available as a script package asset for importing to a Unity project |
 | Unreal Engine 4     | C++, Blueprints                      | Native support: a plugin for the GOG GALAXY SDK available on our [GitHub repository](https://github.com/gogcom/galaxy-ue4-oss-plugin) |
 | CRYENGINE           | C++, C#                              | Native support                                               |
-| Game Maker Studio 2 | GameMaker Language (GML)             | An open source wrapper for the GOG GALAXY SDK v1.113.3 created by Vadim Dyachenko (YellowAfterlife) available on his [GitHub repository](https://github.com/GameMakerDiscord/GOG.gml) |
+| Game Maker Studio 2 | GameMaker Language (GML)             | An open source wrapper for the GOG GALAXY SDK v1.113.3 created by Vadim Dyachenko (YellowAfterlife) available on his [GitHub repository](https://github.com/GameMakerDiscord/GOG.gml). Alternatively, you can use the official GOG Ext plugin which is available [here](https://marketplace.gamemaker.io/assets/11395/gog-ext) |
 | RPG Maker           | Javascript                           | No support                                                   |
 | Amazon Lumberyard   | Lua                                  | C++ components can be added using [“gems”](https://docs.aws.amazon.com/lumberyard/latest/userguide/component-entity-system-pg-gems-code.html) |
 | Godot               | GDScript, NativeScript,Visual Script | C++ components can be added using [“modules”](http://docs.godotengine.org/en/latest/development/cpp/custom_modules_in_cpp.html) |
