@@ -31,3 +31,122 @@ To generate the file containing achievement information, including localized dat
 
 10. Follow the steps outlined in [*Adding Achievements Imported From Steam*](achievements.md#adding-achievements-imported-from-steam) to import the data from the .txt file to the Developer Portal.
 
+## Example
+In general if you followed instructions closely then contents of the VDF file should look similar to this:
+```
+"353252341"
+{
+    "stats"
+    {
+        "1"
+        {
+            "bits"
+            {
+                "0"
+                {
+                    "name" "FAKE_ACHIEVEMENT_1"
+                    "display"
+                    {
+                        "name"
+                        {
+                            "english" "Fake achievement name 1"
+                            "polish" "Testowe osiagniecie 1"
+                        }
+                        "desc"
+                        {
+                            "english" "Fake achievement description 1"
+                            "polish" "Opis testowego osiagniecia 1"
+                        }
+                        "hidden" "1"
+                        "icon" "/img/unlocked.jpg"
+                        "icon_gray" "/img/locked.jpg"
+                    }
+                }
+                "1"
+                {
+                    "name" "FAKE_ACHIEVEMENT_2"
+                    "display"
+                    {
+                        "name"
+                        {
+                            "english" "Fake achievement name 2"
+                            "polish "Testowe osiagniecie 2"
+                        }
+                        "desc"
+                        {
+                            "english" "Fake achievement description 2"
+                            "polish" "Opis testowego osiagniecia 2"
+                        }
+                        "hidden" "0"
+                        "icon" "/img/unlocked.jpg"
+                        "icon_gray" "/img/locked.jpg"
+                    }
+                }
+                "2"
+                {
+                    "name" "FAKE_ACHIEVEMENT_3"
+                    "display"
+                    {
+                        "name"
+                        {
+                            "english" "Fake achievement name 3"
+                            "polish" "Testowe osiagniecie 3"
+                        }
+                        "desc"
+                        {
+                            "english" "Fake achievement description 3"
+                            "polish" "Opis testowego osiagniecia 3"
+                        }
+                        "hidden" "1"
+                        "icon" "/img/unlocked.jpg"
+                        "icon_gray" "/img/locked.jpg"
+                    }
+                }
+                "3"
+                {
+                    "name" "FAKE_ACHIEVEMENT_4"
+                    "display"
+                    {
+                        "name"
+                        {
+                            "english" "Fake achievement name 4"
+                            "polish" "Testowe osiagniecie 4"
+                        }
+                        "desc"
+                        {
+                            "english" "Fake achievement description 4"
+                            "polish" "Opis testowego osiagniecia 4"
+                        }
+                        "hidden" "0"
+                        "icon" "/img/unlocked.jpg"
+                        "icon_gray" "/img/locked.jpg"
+                    }
+                }
+                "4"
+                {
+                    "name" "FAKE_ACHIEVEMENT_5"
+                    "display"
+                    {
+                        "name"
+                        {
+                            "english" "Fake achievement name 5"
+                            "polish" "Testowe osiagniecie 5"
+                        }
+                        "desc"
+                        {
+                            "english" "Fake achievement description 5"
+                            "polish" "Opis testowego osiagniecia 5"
+                        }
+                        "hidden" "1"
+                        "icon" "/img/unlocked.jpg"
+                        "icon_gray" "/img/locked.jpg"
+                    }
+                }
+            }
+            "type" "ACHIEVEMENTS"
+        }
+    }
+    "version" "19"
+}
+
+```
