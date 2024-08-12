@@ -28,6 +28,10 @@ For any questions that are not covered by this FAQ, please contact [our support 
 
     We need to set up a separate SKU for that. Please contact your Product Manager and ask about it. You will need to upload the demo build the same way you uploaded the main game.
 
+5. **I have a general issue with the build upload(it's too slow, hangs at a specific point etc.)**
+    
+    In such cases, you can try to use our new, beta version of Build Creator which uses experimental version of our Pipeline Builder Tool that may work better for you. To do that, please enable beta channel called: beta for Build Creator. More on Beta Channels here: [*Beta Channels*](gc-beta-channels.md). When building a game, please make sure to select: Use beta option. Feel free to report any issues related to the upload to our [support team](https://devportal.gog.com/support/contact).
+
 ## General SDK Questions
 
 1. **How can I invite my team members to the Devportal?**
