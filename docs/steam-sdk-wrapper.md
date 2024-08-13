@@ -1,26 +1,28 @@
 
-# Steam SDK Wrapper (Beta)
+# SDK Wrapper (Beta)
 **Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
 Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
 ## Introduction
 
-As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and Steam. With this tool we aim to decrease the time needed to implement additional features on GOG.  
-If you already have a Steam version of your product, you can get it up and running on our platform within minutes, not hours. No API methods need to be replaced in the code — all you need is to use our Steam SDK Wrapper (Beta).
+As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and other platforms, including Steam. With this tool we aim to decrease the time needed to implement additional features on GOG if you already have a working Steam build (with other platforms planned for future development).  
+If you already have a Steam version of your product (SDK Wrapper is intended to be used only after you have created your game’s Steam build), you can get it up and running on our platform within minutes, not hours. the code need to be made — all you need is to use our SDK Wrapper (Beta).
 
-**Galaxy SDK API is still available alongside Steam SDK Wrapper functionality** so it's possible to create custom Galaxy SDK init but leave other functionality like stats or leaderboards to Steam Wrapper.
+**Galaxy SDK API is still available alongside SDK Wrapper functionality** so it's possible to create custom Galaxy SDK init but leave other functionality like stats or leaderboards to SDK Wrapper.
 
-Steam SDK Wrapper (Beta) is a middle layer that intercepts Steam API calls and translates them into calls that can be understood by the GOG backends.  
-Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, Steam SDK Wrapper (Beta) allows to use the following features out of the box:
+SDK Wrapper (Beta) is a middle layer that provides interoperability between Steam and GOG Galaxy API calls and speeds up the process of developing GOG builds by translating Steam API calls included in a build already created with Steam in mind into calls that can be understood by the GOG backends.  
+Not all SDK features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, SDK Wrapper (Beta) allows to use the following features out of the box:
 
 - achievements,
 - leaderboards,
 - stats,
 - friends,
-- matchmaking (lobby and invites w/o lobby/user data yet)
+- matchmaking
+
+SDK Wrapper is not endorsed or sponsored by Valve.
 
 ## Offline mode
 
-Games on GOG being DRM-free require that the game is playable even without installed Galaxy Client.
+Games on GOG being DRM-free require that the game is playable even without Galaxy Client installed.
 Therefore it should be possible to play the game even when `SteamAPI_Init` returns `false` which isn't the case for Steam.  
 It means that in order to ensure that your game and its online features work, **you need to either**:
  
@@ -38,11 +40,11 @@ DLC Discovery and Storage interface's methods using local filesystem (FileWrite/
 
 1. Make sure you’re using a [supported Steam API version](#supported-steam-api-versions).
 2. Add achievements to DevPortal, ideally using the [VDF file from Steam](https://docs.gog.com/sdk-steam-import/?h=vdf).
-3. Download [Steam SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
-4. Add Steam SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
-    1. Rename *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game 
-    2. Recompile your game linking against *GalaxySteamWrapper/Libraries/GalaxySteamWrapper[64].lib*
-5. Copy *GalaxySteamWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll* or executable, depending on how working directory and links are handled
+3. Download [SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
+4. Add SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
+    1. Rename *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game 
+    2. Recompile your game linking against *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].lib*
+5. Copy *GalaxySDKWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll* or executable, depending on how working directory and links are handled
 6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* (some exceptions may apply, please see Unity section below)
 7. Your build (ideally no need for rebuilding if you chose **4.1**) is now ready to be uploaded to DevPortal
 
@@ -58,22 +60,22 @@ Example:
 
 ### Demo game
 
-You can check our Steam Wrapper demo game and its source code for the exact implementation.
+You can check our SDK Wrapper demo game and its source code for the exact implementation.
 Ask our support for its license (1931358602 Steam Wrapper Demo Game).
 [Check its source code](https://github.com/gogcom/steam-wrapper-demo-game) and build it yourself.
 
 ## Supported Steam API Versions
 
-Steam SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
+SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
 - **1.31** *to* **1.58**
 
-If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to Steam SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version.  
-Whichever you choose, you can find the list of all SteamWorks releases [here](https://partner.steamgames.com/downloads/).
+If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version.  
+Whichever you choose, you can find the list of all Steamworks releases [here](https://partner.steamgames.com/downloads/).
 
 ## Configuration File
 
-In order for Steam SDK Wrapper (Beta) to know the [SDK credentials](https://docs.gog.com/bc-project-properties/#sdk-credentials) of your game, they must be specified in `GalaxyConfig.json` (you can obtain them in [Devportal](https://docs.gog.com/developer-portal/#games-screen-product-buttons)). It is a flat JSON file used for configurations which should be distributed along with the game and located in its working directory — usually where the EXE file is. The only required properties are `client_id` and either `client_secret` or  `client_code`. The remaining [options](#available-options) are read and parsed during `SteamAPI_Init`.
+In order for SDK Wrapper (Beta) to know the [SDK credentials](https://docs.gog.com/bc-project-properties/#sdk-credentials) of your game, they must be specified in `GalaxyConfig.json` (you can obtain them in [Devportal](https://docs.gog.com/developer-portal/#games-screen-product-buttons)). It is a flat JSON file used for configurations which should be distributed along with the game and located in its working directory — usually where the EXE file is. The only required properties are `client_id` and either `client_secret` or  `client_code`. The remaining [options](#available-options) are read and parsed during `SteamAPI_Init`.
 
 ### client_code
 
@@ -112,8 +114,8 @@ CSteamworks is not currently supported.
 
 ### Manual Callback Dispatch
 
-As of version 1.1.2 of SteamWrapper, Steam's manual callback dispatch (instead of running all callbacks at once with `SteamAPI_RunCallbacks` you can dispatch them manually `SteamAPI_ManualDispatch`) is fully supported.  
-Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be possible to use this and later versions with SteamWrapper.
+As of version 1.1.2 of SDK Wrapper, Steam's manual callback dispatch (instead of running all callbacks at once with `SteamAPI_RunCallbacks` you can dispatch them manually `SteamAPI_ManualDispatch`) is fully supported.  
+Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be possible to use this and later versions with SDK Wrapper.
 
 ### Game engines
 
@@ -121,6 +123,7 @@ Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be 
 | -------------------- | ------------------------------------------------------------------------------------------ |
 | `Unreal Engine` | both native Steam implementation and EOS seems to work but a little tinkering might be needed. |
 | `Unity` | appears to work without an issue |
+| `Godot` | appears to work without an issue |
 | `Game Maker` | appears to work without an issue |
 | `RenPy` | some issues regarding working directory/dll placement has been reported |
 
@@ -129,7 +132,7 @@ We are working on a better approach regarding theses issues.
 
 ## Unity
 
-Depending on your Steamworks implementation (Custom/SteamWorks.NET/Facepunch) you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
+Depending on your Steamworks implementation (missing explicit `SteamStats()->RequestCurrentStats` call in Steamworks.NET, Facepunch) you might need to set `stats_on_init` flag in `GalaxyConfig.json` to `true` to fix achievements not working properly.
 
 !!! Important
     Correct placement of the GalaxyConfig.json for Unity games is in the root folder of the game installation directory, next to the game.exe.
@@ -150,7 +153,7 @@ Depending on your Steamworks implementation (Custom/SteamWorks.NET/Facepunch) yo
 
 ## Godot
 
-If you are using GodotSteam you might need to set `is_unity` flag in `GalaxyConfig.json` to `true`.
+If you are using GodotSteam you might need to set `stats_on_init` flag in `GalaxyConfig.json` to `true`.
 
 ## Unreal Engine
 
@@ -189,7 +192,7 @@ Online Subsystem is a private dependency so by default it is statically linked i
 
 This implies drag-and-dropping `GalaxySteamWrapper[64].dll` and `Galaxy[64].dll` e.g here `/YourUnrealEnginePath/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]/Win64` replacing the original `steam_api[64].dll` and then recompiling your project.  
 
-After recompilation, please make sure to ship your package with `GalaxyConfig.json` placed in `YourPacakge/YourProject/Binaries/Win[64]` beside your game's executable file and `Galaxy[64].dll` in `YourPackage/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]`.
+After recompilation, please make sure to ship your package with `GalaxyConfig.json` placed in `YourPackage/YourProject/Binaries/Win[64]` beside your game's executable file and `Galaxy[64].dll` in `YourPackage/Engine/Binaries/ThirdParty/Steamworks/Steam[Current Version]`.
 
 ### Writing achievements fails (UE4)
 
