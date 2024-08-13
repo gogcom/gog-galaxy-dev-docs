@@ -3,6 +3,10 @@
 Galaxy supports user authentication using OpenID Connect.
 As for now there is no support for OpenID Discovery so the connection between the issuer(GOG) and platform must be made explicitly.
 
+## OpenID scope
+
+You need to submit a ticket to our support so we can add OpenID scope to your game.
+
 ## PlayFab
 
 1. Create a manual connection between PlayFab and GOG token provider. Setting this up through PlayFab will not work due to no support for OpenID Discovery through GOG.
