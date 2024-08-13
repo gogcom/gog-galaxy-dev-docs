@@ -39,7 +39,33 @@ Windows games install redistributables at the time of installation, while Linux 
 
 When transferring your build to us, please include the necessary libraries along with your game. Please either specify the [rpath](https://en.wikipedia.org/wiki/Rpath) with the location of these libraries, or ship a launch shell script that will point the binary to the location of these libraries (using the  `LD_LIBRARY_PATH` variable).
 
-To ensure everything is working correctly, we recommend testing your game on a freshly installed Ubuntu 16.04 or 18.04 system — this will confirm if your game runs without installing anything user-side and without having the non-standard libraries present on users’ systems. Additionally, Valve’s Steam client includes its own set of libraries (known as *Steam runtime*), which provides the user with the required libraries for their games. Therefore, It is vital that you test on a cleanly installed Linux machine to ensure that your game includes the required dependencies across all distribution platforms.
+To ensure everything is working correctly, we recommend testing your game on a freshly installed Ubuntu 22.04 LTS, 20.04 LTS or 18.04 system — this will confirm if your game runs without installing anything user-side and without having the non-standard libraries present on users’ systems. Additionally, Valve’s Steam client includes its own set of libraries (known as *Steam runtime*), which provides the user with the required libraries for their games. Therefore, It is vital that you test on a cleanly installed Linux machine to ensure that your game includes the required dependencies across all distribution platforms.
+
+If you're compiling a native Linux application, the simplest solution is to set the rpath/runpath inside the executable. This will tell Linux where to search for libraries. If you set rpath to $ORIGIN, you can place your libraries next to the executable and they will be found (You can also add subdirectories to $ORIGIN if you wish)
+
+Depending on the build environment, there are different ways to make rpath/runpath work.
+For cmake, you can try this:
+Insert these cmake commands before the: "add_executable"
+```
+command:set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH $ORIGIN)
+
+to check if runpath is properly set in the executable, run this command:
+readelf -a <path-to-executable> | grep -i RUNPATH
+
+If done correctly, it should output: "Library runpath: [$ORIGIN]"
+```
+
+### Important note regarding SDL
+
+If your game uses SDL (or another windowing/audio library), you may run into problems. This library is closely tied to the Linux disribution and drivers (the same way OpenGL is, for example) and is generally best to use the the library provided by the Linux distribution.
+However, on some Linux distributions, SDL is not installed by default. So our recommendation is to bundle libSDL with your application using rpath or LD_LIBRARY_PATH methods to ensure your game starts. This means your game will always load your version of SDL but players can always delete/rename this library if they run into problems, which will result in Linux using the systems's SDL instead of yours.
+
+You can either compile your own version of SDL or simply take one from an older version of Ubuntu.
+
+!!! Note
+    Don't statically link SDL in your application because if users run into problems, they won't have the option to use their system's SDL library.
 
 !!! Important "Wwise Sound Plugin Issue"
     There is a known issue that affects Unity engine games using the Wwise sound plugin (*libAkSoundEngine.so*); this plugin has a hidden dependency on the SDL2 library and without it won’t run properly (often will only boot to a black screen).
