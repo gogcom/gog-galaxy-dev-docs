@@ -4,9 +4,9 @@ This development kit is available on our [GOG GALAXY Developer Portal](https://d
 
 The GOG GALAXY SDK is compatible with the [GOG GALAXY client](gc-client-overview.md) and the [GOG GALAXY overlay](gc-overlay.md). The GOG GALAXY client will display all of the unlocked achievements, and the overlay will display a notification whenever you unlock the achievement in a game. The overlay can also be used to send and receive invitations to online multiplayer games.
 
-## Steam SDK Wrapper (Beta)
+## SDK Wrapper (Beta)
 
-Steam SDK Wrapper (Beta) is a middle layer that intercepts Steam API calls and translates them into calls that can be understood by the GOG backends. Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, Steam SDK Wrapper (Beta) allows to use the following features out of the box:
+SDK Wrapper (Beta) is a middle layer that provides interoperability between Steam and GOG Galaxy API calls and speeds up the process of developing GOG builds by translating Steam API calls. Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, SDK Wrapper (Beta) allows to use the following features out of the box:
 
 * achievements,
 * leaderboards,
