@@ -2,6 +2,9 @@
 # SDK Wrapper (Beta)
 **Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
 Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
+
+**SDK Wrapper is not endorsed or sponsored by Valve.**
+
 ## Introduction
 
 As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and other platforms, including Steam. With this tool we aim to decrease the time needed to implement additional features on GOG if you already have a working Steam build (with other platforms planned for future development).  
@@ -17,8 +20,6 @@ Not all SDK features are supported yet â€” and, obviously, some will never be â€
 - stats,
 - friends,
 - matchmaking
-
-SDK Wrapper is not endorsed or sponsored by Valve.
 
 ## Offline mode
 
@@ -366,3 +367,5 @@ Also SteamTV and SteamVR interfaces are not supported
 
 **Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
 Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
+
+**SDK Wrapper is not endorsed or sponsored by Valve.**

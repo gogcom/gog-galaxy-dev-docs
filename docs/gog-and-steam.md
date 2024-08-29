@@ -1,7 +1,7 @@
 # Porting Your Games from Steam to GOG
 
 Chances are you already have your game prepared for Valve’s Steam platform.  
-We want to make this transition as smooth as possible, and although there are differences between the two platforms, you can use our [Steam SDK Wrapper (Beta)](https://docs.gog.com/steam-sdk-wrapper/) to implement additional features on GOG in a matter of minutes.  
+We want to make this transition as smooth as possible, and although there are differences between the two platforms, you can use our [SDK Wrapper (Beta)](https://docs.gog.com/steam-sdk-wrapper/) to implement additional features on GOG in a matter of minutes.  
 Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA) regarding Steam Wrapper as it's extremly important and helps us improve this project.
 
 Here, you will find a list of items that need your attention when trying to adapt an existing Steam build to the GOG environment.
@@ -166,6 +166,6 @@ Moreover, the GOG GALAXY SDK has two ways of checking whether any packets are av
 
 As mentioned in Multiplayer section, game hosts in GOG GALAXY are not publicly available: their IP addresses are not exposed and the communication is based on GalaxyID. Therefore, all Steamworks methods related to GameServers, e.g. for setting map names (`ISteamGameServer::SetMapName`, `ISteamGameServer::SetServerName`), favorite game server, a friend’s game server etc., have no counterparts in the GOG GALAXY SDK.
 
-## The Easy Way: Steam SDK Wrapper (Beta)
+## The Easy Way: SDK Wrapper (Beta)
 
 If you have a Steam build of your game and don’t want to deal with the code anymore, you can use our quick solution called Steam SDK Wrapper (Beta). It will allow you to port basic Steam functionalities to GOG within minutes. More on this in the [next article](steam-sdk-wrapper.md).
