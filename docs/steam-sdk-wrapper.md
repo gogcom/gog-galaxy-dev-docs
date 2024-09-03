@@ -62,8 +62,8 @@ Example:
 ### Demo game
 
 You can check our SDK Wrapper demo game and its source code for the exact implementation.
-Ask our support for its license (1931358602 Steam Wrapper Demo Game).
-[Check its source code](https://github.com/gogcom/steam-wrapper-demo-game) and build it yourself.
+Ask our support for its license (1931358602 SDK Wrapper Demo Game).
+[Check its source code](https://github.com/gogcom/sdk-wrapper-demo-game) and build it yourself.
 
 ## Supported Steam API Versions
 
