@@ -1,14 +1,14 @@
 # Porting Your Games from Steam to GOG
 
 Chances are you already have your game prepared for Valve’s Steam platform.  
-We want to make this transition as smooth as possible, and although there are differences between the two platforms, you can use our [SDK Wrapper (Beta)](https://docs.gog.com/steam-sdk-wrapper/) to implement additional features on GOG in a matter of minutes.  
-Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA) regarding Steam Wrapper as it's extremly important and helps us improve this project.
+We want to make this transition as smooth as possible, and although there are differences between the two platforms, you can use our interoperability tool called: [SDK Wrapper (Beta)](https://docs.gog.com/steam-sdk-wrapper/) to help you efficiently implement additional features on GOG in a matter of minutes.  
+Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA) regarding SDK Wrapper as it's extremely important and helps us improve this project.
 
 Here, you will find a list of items that need your attention when trying to adapt an existing Steam build to the GOG environment.
 
 ## No DRM, No Problem
 
-GOG’s “DRM-Free” philosophy means that games released on GOG can’t have any DRM/copy protection and should work in all possible scenarios, regardless of the result of GOG GALAXY authentication, GOG GALAXY client presence or Internet connection availability. Of course, online-only features such as multiplayer, retrieving friends or leaderboards cannot be available when the user is offline, yet all other aspects of the game should not be affected, e.g. achievements functionality should be available no matter if the user is online or offline (as long as the GOG GALAXY client is installed and the user is logged in to it).
+GOG’s “DRM-Free” philosophy means that games released on GOG can’t have any DRM/copy protection and should work in all possible scenarios, regardless of the result of GOG GALAXY authentication, GOG GALAXY client presence or Internet connection availability. Of course, online-only features such as multiplayer, retrieving friends or leaderboards cannot be available when the user is offline but all other aspects of the game should not be affected, e.g. achievements functionality should be available no matter if the user is online or offline (as long as the GOG GALAXY client is installed and the user is logged in to it).
 
 Therefore, all Steam methods related to DRM (user authentication in particular) are of no use on GOG. For more, please see the articles on [authorization in GOG GALAXY](sdk-galaxy-feats-and-states.md) and [authenticating using Steam credentials](sdk-authentication-with-other-services.md#authenticating-using-steam-credentials).
 
@@ -26,7 +26,7 @@ As mentioned previously, authentication failure should not limit the ability of 
 
 ## Listeners
 
-Like in Steamworks, to handle the results of async operations, Galaxy uses a concept of *callbacks* and *listeners*. To process the input/output data and call appropriate listeners, the [`galaxy::api::ProcessData()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga1e437567d7fb43c9845809b22c567ca7) method should be called once in a while, similarly to `SteamAPI_RunCallbacks()`.
+Similarly to Steamworks, to handle the results of async operations, Galaxy uses a concept of *callbacks* and *listeners*. To process the input/output data and call appropriate listeners, the [`galaxy::api::ProcessData()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga1e437567d7fb43c9845809b22c567ca7) method should be called once in a while, similarly to `SteamAPI_RunCallbacks()`.
 
 Listeners can be of one out of the two types:
 
@@ -168,4 +168,6 @@ As mentioned in Multiplayer section, game hosts in GOG GALAXY are not publicly a
 
 ## The Easy Way: SDK Wrapper (Beta)
 
-If you have a Steam build of your game and don’t want to deal with the code anymore, you can use our quick solution called Steam SDK Wrapper (Beta). It will allow you to port basic Steam functionalities to GOG within minutes. More on this in the [next article](steam-sdk-wrapper.md).
+If you have a Steam build of your game already and want to speed up your work, you can use our quick tool called: Steam SDK Wrapper (Beta) to create your GOG game build efficiently. It will help you with providing interoperability between Steam and GOG build functionalities. More on this in the [next article](steam-sdk-wrapper.md).
+
+SDK Wrapper is not endorsed or sponsored by Valve.

@@ -6,7 +6,9 @@ The GOG GALAXY SDK is compatible with the [GOG GALAXY client](gc-client-overview
 
 ## SDK Wrapper (Beta)
 
-SDK Wrapper (Beta) is a middle layer that provides interoperability between Steam and GOG Galaxy API calls and speeds up the process of developing GOG builds by translating Steam API calls. Not all Steam features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, SDK Wrapper (Beta) allows to use the following features out of the box:
+SDK Wrapper (Beta) is a middle layer that provides interoperability between Steam and GOG Galaxy API calls and speeds up the process of developing GOG builds by translating Steam API calls included in a build already created with Steam in mind into calls that can be understood by the GOG backends. SDK Wrapper is intended to be used only after you have created your game’s Steam build. 
+
+Not all SDK features are supported yet — and, obviously, some will never be — but basic functionality is preserved. Currently, SDK Wrapper (Beta) allows to use the following features out of the box:
 
 * achievements,
 * leaderboards,
@@ -14,6 +16,8 @@ SDK Wrapper (Beta) is a middle layer that provides interoperability between Stea
 * friends.
 
 More info on the tool can be found [here](https://docs.gog.com/steam-sdk-wrapper/).
+
+SDK Wrapper is not endorsed or sponsored by Valve.
 
 
 ## DRM and SDK
@@ -23,7 +27,7 @@ One of the main features of games available on GOG.com is that they are provided
 There are three main concepts you should be aware of when implementing the GOG GALAXY SDK:
 
 - The GOG GALAXY client should not be required to launch the game. A failed [`IGalaxy::Init()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga7d13610789657b6aebe0ba0aa542196f) call, which tries to initialize the client, should not stop the game from loading, but rather just disable the game modules that require it — like achievements, leaderboards, statistics or multiplayer.
-- If the GOG GALAXY client is installed and running, player authentication in our servers using the [`IUser::SignInGalaxy()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga7d13610789657b6aebe0ba0aa542196f) call should be entirely optional, too. That is because we do not require active connection between the client and our servers. Once you have downloaded the game to your local drive, you should be able to play it even in the middle of the Amazon rainforest — provided you have an access to electricity, of course.
+- If the GOG GALAXY client is installed and running, player authentication in our servers using the [`IUser::SignInGalaxy()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga7d13610789657b6aebe0ba0aa542196f) call should be entirely optional, too. That is because we do not require active connection between the client and our servers. Once you have downloaded the game to your local drive, you should be able to play it even in the middle of the Amazon rainforest — provided you have access to electricity, of course.
 - Should a user lose their connection to the GOG GALAXY servers, the game should seamlessly switch to an offline mode. With achievements, however, we include a local cache that still allows the user to unlock them and synchronize with the servers when the connection is restored.
 
 In the next chapters we show you what features our SDK offers, as well as how to implement and test them. We will also demonstrate the SDK in combat: you can check our sample game created in Unity with the GOG GALAXY SDK implemented in C#.

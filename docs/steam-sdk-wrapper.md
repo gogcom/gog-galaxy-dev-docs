@@ -8,7 +8,7 @@ Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
 ## Introduction
 
 As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and other platforms, including Steam. With this tool we aim to decrease the time needed to implement additional features on GOG if you already have a working Steam build (with other platforms planned for future development).  
-If you already have a Steam version of your product (SDK Wrapper is intended to be used only after you have created your game’s Steam build), you can get it up and running on our platform within minutes, not hours. the code need to be made — all you need is to use our SDK Wrapper (Beta).
+If you already have a Steam version of your product (SDK Wrapper is intended to be used only after you have created your game’s Steam build), you can get it up and running on our platform within minutes, not hours. No changes to the code need to be made — all you need is to use our SDK Wrapper (Beta).
 
 **Galaxy SDK API is still available alongside SDK Wrapper functionality** so it's possible to create custom Galaxy SDK init but leave other functionality like stats or leaderboards to SDK Wrapper.
 
@@ -20,6 +20,8 @@ Not all SDK features are supported yet — and, obviously, some will never be �
 - stats,
 - friends,
 - matchmaking
+
+SDK Wrapper is not endorsed or sponsored by Valve.
 
 ## Offline mode
 
@@ -43,11 +45,11 @@ DLC Discovery and Storage interface's methods using local filesystem (FileWrite/
 2. Add achievements to DevPortal, ideally using the [VDF file from Steam](https://docs.gog.com/sdk-steam-import/?h=vdf).
 3. Download [SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
 4. Add SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
-    1. Rename *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game 
-    2. Recompile your game linking against *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].lib*
+    - Option a: Rename *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game
+    - Option b: Recompile your game linking against *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].lib*
 5. Copy *GalaxySDKWrapper/Libraries/Galaxy[64].dll* to the same directory as *steam_api[64].dll* or executable, depending on how working directory and links are handled
 6. Create a [*GalaxyConfig.json*](#configuration-file) file where you specify `client_id` and either `client_secret` or `client_code` and place it in the same directory as *steam_api[64].dll* (some exceptions may apply, please see Unity section below)
-7. Your build (ideally no need for rebuilding if you chose **4.1**) is now ready to be uploaded to DevPortal
+7. Your build (ideally no need for rebuilding if you chose **4.a**) is now ready to be uploaded to DevPortal
 
 Example:
 
@@ -67,7 +69,7 @@ Ask our support for its license (1931358602 SDK Wrapper Demo Game).
 
 ## Supported Steam API Versions
 
-SDK Wrapper (Beta) can support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
+SDK Wrapper (Beta) can currently support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
 - **1.31** *to* **1.58**
 
@@ -108,8 +110,7 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 
 ## Bindings to other programming languages
 
-As of 1.32 flat API is supported so projects like [Steamworks.NET](https://steamworks.github.io/) or [Facepunch.Steamworks](https://wiki.facepunch.com/steamworks/) **should** work without and additional tinkering.
-Same goes with other projects that utilizes `steam_api.dll`'s calls to flat API.
+As of 1.32 flat API is supported so projects like [Steamworks.NET](https://steamworks.github.io/) or [Facepunch.Steamworks](https://wiki.facepunch.com/steamworks/) **should** work without any additional tinkering. Same goes with other projects that utilizes `steam_api.dll`'s calls to flat API.
 
 CSteamworks is not currently supported.
 
@@ -128,8 +129,7 @@ Facepunch.Steamworks moved to using manual dispatch as of 2.3.0 so it should be 
 | `Game Maker` | appears to work without an issue |
 | `RenPy` | some issues regarding working directory/dll placement has been reported |
 
-Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement.
-We are working on a better approach regarding theses issues.
+Most of the issues with bindings and game engines seems to be related to working directory/dll or exe placement. We are working on a better approach regarding these issues.
 
 ## Unity
 
