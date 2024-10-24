@@ -45,6 +45,7 @@ For any questions that are not covered by this FAQ, please contact [our support 
 3. **I keep getting authorization and/or [`galaxy::api::SignInGalaxy()`](https://docs.gog.com/galaxyapi/classgalaxy_1_1api_1_1IUser.html#a65e86ddce496e67c3d7c1cc5ed4f3939) errors**
 
     Make sure you have the necessary privileges (license) for your game in the [User Management](user-management.md) section of the Developer Portal – the GOG GALAXY SDK will not initialize if your account does not have a valid license for the game. If your account is ran by your publisher, please contact its administrator. Please check whether your GOG GALAXY client is running and you are logged in. If your problems persist, please contact [our support team](https://devportal.gog.com/support/contact)
+
 4. **What are the `client_id` and `client_secret` parameters and where can I get them for my game?**
 
     `Client_id` is a unique identifier of your game in GOG GALAXY. `Client_id` and `client_secret` are used for initializing GOG GALAXY during the [`galaxy::api::Init()`](https://docs.gog.com/galaxyapi/group__Peer.html#ga7d13610789657b6aebe0ba0aa542196f) call. You can find them in the *SDK Credentials* button for a given game in the *Games* section of the [Developer Portal](developer-portal.md).
