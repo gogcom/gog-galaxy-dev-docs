@@ -101,7 +101,7 @@ Plaintext `client_secret` can be used for testing purposes, but it is recommende
 | `enable_logs`      | bool   | `false`  | Allows to generate GalaxySteamWrapper-specific logs for troubleshooting |
 | `auth_on_init`     | bool   | `true`   | `SteamAPI_Init` will attempt blocking `SignInGalaxy` |
 | `require_online`   | bool   | `false`  | Indicates if sign in with GOG GALAXY backend is required |
-| `is_unity`         | bool   | `false`  | See Unity section under Game Engines. **DEPRECIATED** since SW version 1.2.11 |
+| `force_callbacks`  | bool   | `false`  | Introduced in SW version: 1.2.14. Force set to `true` if you notice issues with callback processing. |
 | `stats_on_init`    | bool   | `false`  | Config option to request user stats on Init |
 | `steam_appid`      | number | none     | Config option to overwrite Steam AppID |
 | `init_always_true` | bool   | `false`  | Config option so SteamAPI_Init always return 'true' |
