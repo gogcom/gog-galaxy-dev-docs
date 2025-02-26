@@ -1,6 +1,6 @@
 # Essentials Checklist
 
-Please send the following via email or a shared drive of your choice, elements marked with 🟠 can be uploaded through [Assets Manager](https://devportal.gog.com/panel/games). Elements in *italics* are optional.  
+Please send the following via our [Assets Manager](https://devportal.gog.com/panel/games). Elements in *italics* are optional.
 
 ## Game Setup
 
@@ -10,23 +10,25 @@ Please send the following via email or a shared drive of your choice, elements m
 
 ## Creating the Store Page
 
-☐   Graphics assets prepared using our [Templates](https://items.gog.com/templates/gog_art_assets.zip) or [Asset Rendering Tool](https://devportal.gog.com/panel/games) 🟠  
-☐   Key art & logo in high resolution (min. 1920 x 1080), layered .psd file 🟠  
-☐   Store description (we support EN, DE, FR, CN, PL & RU) 🟠  
-☐   System requirements 🟠  
-☐   Languages supported 🟠  
-☐   Screenshots 🟠  
-☐   Trailer (including GOG.com [logo](https://items.gog.com/GOG_logo.zip) on the end slate) 🟠   
-☐   Genres & Tags 🟠   
-☐   *Legal lines*   
-☐   *Age ratings (USK, ESRB, PEGI, CLASSIND) except for those provided through IARC*   
-☐   *Countries the game should be banned in (if any)*  
+☐   Graphics assets prepared using our [Templates](https://items.gog.com/templates/gog_art_assets.zip) or [Asset Rendering Tool](https://devportal.gog.com/panel/games)  
+☐   Key art & logo in high resolution (min. 1920 x 1080), layered .psd file  
+☐   Store description (we support EN, DE, FR, CN, PL & RU)  
+☐   System requirements  
+☐   Languages supported   
+☐   Screenshots  
+☐   Trailer (including GOG.com [logo](https://items.gog.com/GOG_logo.zip) on the end slate)  
+☐   Genres & Tags  
+☐   *Legal lines*     
+☐   *Age ratings (USK, ESRB, PEGI, CLASSIND) except for those provided through IARC*     
+☐   *Countries the game should be banned in (if any)*    
 
 ## Preparing the Build
 
-☐   DRM-free build uploaded via [Build Creator](https://docs.gog.com/bc-quick-start/) or [Pipeline Builder](https://docs.gog.com/pb-quick-start/) with integrated achievements and [Galaxy SDK](https://docs.gog.com/sdk/) (Windows, Mac and Linux if available)  
-☐   A short guide on how to unlock the easiest achievement in game and if it's not possible within the first 15-20 minutes of playing, a save file from the moment in game just before unlocking a certain achievement   
-☐   Desired cloud saves path and saves size   
+☐   Please deliver [(Build Delivery)](build-delivery.md) DRM-free Release Candidate for all supported OSs (Windows, MacOS, Linux) and (optional) with our [Galaxy SDK](sdk.md) implemented (for achievements, Leaderboards, Galaxy Multiplayer etc.). For best and fastest results please consult [Quality Assurance](quality-assurance.md) article  
+
+☐   If achievements are to be implemented: Please provide a short guide on how to unlock the easiest/fastest achievements in game and if it's not possible within the first 15-20 minutes of playing, a save file from the moment in game just before unlocking a certain achievement  
+ 
+☐   If Cloud Saves are to be added: Please provide actual cloud saves path (cloud saves will be added if quota doesn’t exceed 200 MB and saves are stored in separate subfolder - no support for loose files or registry entries)  
 
 !!! Tip "Important"
     Please do not unpublish (or delete) any previous builds in DevPortal - it helps us keep track of the changes and may prove useful in case we need to use our rollback feature.  
