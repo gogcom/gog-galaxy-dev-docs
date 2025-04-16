@@ -5,7 +5,7 @@ Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
 
 **SDK Wrapper is not endorsed or sponsored by Valve.**
 
-**SDK Wrapper supports only Windows.**
+**SDK Wrapper only supports Windows.**
 
 ## Introduction
 
