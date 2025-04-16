@@ -5,6 +5,8 @@ Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
 
 **SDK Wrapper is not endorsed or sponsored by Valve.**
 
+**SDK Wrapper supports only Windows.**
+
 ## Introduction
 
 As you know from [the previous article](https://docs.gog.com/gog-and-steam/), there are some essential differences between GOG and other platforms, including Steam. With this tool we aim to decrease the time needed to implement additional features on GOG if you already have a working Steam build (with other platforms planned for future development).  
