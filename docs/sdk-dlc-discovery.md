@@ -87,4 +87,4 @@ As with all features of the GOG GALAXY SDK, we are more than happy to conduct im
 !!! Attention
     We once again wish to stress that this DLC Discovery feature is purely to check for the presence of the DLC metadata file; it should not be dependent on the results of the `galaxy::api::Init()` or `galaxy::api::User()->SignInGalaxy()` calls.
 
-If you encounter any issues with this process, or have any feedback or questions, please email our support team at <support@developer.gog.com>.
+If you encounter any issues with this process, or have any feedback or questions, please contact [our support team](https://devportal.gog.com/support/contact)

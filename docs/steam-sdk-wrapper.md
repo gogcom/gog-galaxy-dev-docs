@@ -73,7 +73,7 @@ Ask our support for its license (1931358602 SDK Wrapper Demo Game).
 
 SDK Wrapper (Beta) can currently support only specific versions of the Steam API headers and your game must be built with one of them. Currently, the supported versions are:
 
-- **1.31** *to* **1.58**
+- **1.31** *to* **1.62** <- this info may become outdated with time. Please double-check the latest supported Steam API version on the SDK Wrappr download page on devportal.
 
 If your game already uses one of the above, no action is necessary. Otherwise, support for other versions of the Steam API headers can be added to SDK Wrapper (Beta) or you may update your current pipeline (your existing build) or set up a new one with a different Steam API version.  
 Whichever you choose, you can find the list of all Steamworks releases [here](https://partner.steamgames.com/downloads/).

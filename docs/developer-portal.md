@@ -20,7 +20,7 @@ The GOG GALAXY ecosystem includes:
 |                        *News* | Information on changes in the Developer Portal: new features, enhancements, fixes, etc. |
 |       *GOG GALAXY Components* | Redirects to product pages with basic info and download links for [Build Creator](bc-quick-start.md), [Demo Game](demo-desc-and-prerequisities.md), In-game [Overlay](gc-overlay.md), [Pipeline Builder](pb-quick-start.md), [SDK](sdk.md) and UnrealEngine4 Plugin |
 |                       *Games* | Displays all products under the developer account and their product IDs. Allows to manage product settings such as [leaderboards](leaderboards.md), [achievements](achievements.md), [statistics](statistics.md), SDK Credentials, [DLCs](dlc-and-extras.md), [builds & branches](build-branches.md) and Devportal user permissions |
-|                     *Support* | Allows access to all existing articles and documentation and provides an option to submit a ticket. If anything seems unclear or is missing, please contact our dedicated GOG GALAXY Support team: [support@developer.gog.com](mailto:support@developer.gog.com) |
+|                     *Support* | Allows access to all existing articles and documentation and provides an option to submit a ticket. If anything seems unclear or is missing, please contact[our support team](https://devportal.gog.com/support/contact)
 |                    *Username* | If your user account is assigned to more than one developer account, you can switch between those in the dropdown next to your username in Devportal |
 | [*Users*](user-management.md) | Allows you to manage users, invite new ones, and add licenses to accounts of your choosing |
 
