@@ -58,5 +58,6 @@ print(resp.text)
 [DEFAULT]
 openid = true
 ```
+Be advised that config should be stored inside the game's working directory. 
 
 4. The JWT can be retrieved through `galaxy::api::Users()->GetIDToken()` after logging in through `galaxy::api::Users()->SignInGalaxy()`, which can then be used as the id token when login in through OpenId (the PlayFab plugin)
