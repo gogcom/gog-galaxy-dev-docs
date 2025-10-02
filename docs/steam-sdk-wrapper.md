@@ -46,6 +46,8 @@ DLC Discovery and Storage interface's methods using local filesystem (FileWrite/
 1. Make sure you’re using a [supported Steam API version](#supported-steam-api-versions).
 2. Add achievements to DevPortal, ideally using the [VDF file from Steam](https://docs.gog.com/sdk-steam-import/?h=vdf).
 3. Download [SDK Wrapper (Beta)](https://devportal.gog.com/galaxy/components/steam_sdk_wrapper)
+**Be advised, make sure to download version of the SDK Wrapper which corresponds to the version of SteamWorks that is used by your game!**
+
 4. Add SDK Wrapper (Beta) to your game. There are two ways to achieve that. Do one of the following:
     - Option a: Rename *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].dll* to *steam_api[64].dll* and use it to replace the original *steam_api[64].dll* file in your already built game
     - Option b: Recompile your game linking against *GalaxySDKWrapper/Libraries/GalaxySDKWrapper[64].lib*
