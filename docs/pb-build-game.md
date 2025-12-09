@@ -128,6 +128,30 @@ There are two examples of setupSteps in the example below:
                 ],
                 "name": "Cypers Demo Game",
                 "productId": "<ProductID_Here>",
+                "setupSteps": [
+            {
+                "name": "saveFolders",
+                "install": {
+                    "action": "savePath",
+                    "arguments": {
+                        "type": "folder",
+                        "savePath": "{userappdata}/../LocalLow/Something/Something"
+                    }
+                }
+            },
+            {
+                "name": "registryKey1",
+                "install": {
+                    "action": "setRegistry",
+                    "arguments": {
+                        "root": "HKEY_CURRENT_USER",
+                        "subkey": "Software\\Something\\Something",
+                        "deleteSubkeys": true,
+                        "saveGameData": true
+                    }
+                }
+            }
+        ],
                 "tasks": [
                     {
                         "category": "game",
@@ -195,30 +219,6 @@ There are two examples of setupSteps in the example below:
                         "type": "FileTask"
                     }
                 ]
-            }
-        ],
-        "setupSteps": [
-            {
-                "name": "saveFolders",
-                "install": {
-                    "action": "savePath",
-                    "arguments": {
-                        "type": "folder",
-                        "savePath": "{userappdata}/../LocalLow/Something/Something"
-                    }
-                }
-            },
-            {
-                "name": "registryKey1",
-                "install": {
-                    "action": "setRegistry",
-                    "arguments": {
-                        "root": "HKEY_CURRENT_USER",
-                        "subkey": "Software\\Something\\Something",
-                        "deleteSubkeys": true,
-                        "saveGameData": true
-                    }
-                }
             }
         ]
     }}
