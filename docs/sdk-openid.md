@@ -3,6 +3,8 @@
 Galaxy supports user authentication using OpenID Connect.
 As for now there is no support for OpenID Discovery so the connection between the issuer(GOG) and platform must be made explicitly.
 
+**Please make sure to use the latest version of GALAXY SDK**. You can get it from [devportal](https://devportal.gog.com/galaxy/components/sdk).
+
 ## OpenID scope
 
 You need to submit a ticket to our support so we can add OpenID scope to your game.
