@@ -14,3 +14,30 @@ To add a depot to a game:
 In this example we are adding only one depot to our game, but this process can be repeated as many times as required. You can find more information in [*Adding Depots*](bc-adding-depots.md).
 
 In case of macOS application bundles, please refer to the [*Preparing Depots for macOS Application Bundle*](bc-macos-depot.md) article.
+
+### Depots structure
+
+Let's say, you need to setup a depot for a DLC as it contains additional files that have to land in .../Content/Paks and the folder structure for the base game looks like this:
+```
+.
+└── Base game/
+    └── Windows/
+        └── Game_name/
+            └── Content/
+                └── Paks/
+```
+In the meantime, on your local SSD, you have two folders:
+
+1. Base_Game - contains files for the base game.
+2. DLC - contains only DLC files.
+
+In order for the DLC files to land in the correct space, you have to replicate folder structure of the Base_Game inside the DLC folder. For example if your DLC file is a single .pak file that is going to be installed in: .../Game/Base game/Windows/Game_name/Content/Paks/ then in the DLC folder, you have to setup folders like this:
+```
+.
+└── Base game/
+    └── Windows/
+        └── Game_name/
+            └── Content/
+                └── Paks/
+                    └── DLC_file <- here is your DLC file
+```
