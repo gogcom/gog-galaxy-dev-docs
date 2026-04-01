@@ -1,5 +1,5 @@
 # OpenID
-
+. 
 Galaxy supports user authentication using OpenID Connect.
 As for now there is no support for OpenID Discovery so the connection between the issuer(GOG) and platform must be made explicitly.
 
