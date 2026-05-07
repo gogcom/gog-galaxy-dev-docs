@@ -21,7 +21,7 @@ GOGGalaxyPipelineBuilder.exe extract-repository <repository_path> <output> <opti
 
 !!! Example
     ```
-    ./GOGGalaxyPipelineBuilder.exe extract-repository ~/gamerepo/ ~/gamerepo/extracted/ --version="1.02" --log_level=debug
+    ./GOGGalaxyPipelineBuilder extract-repository ~/gamerepo/ ~/gamerepo/extracted/ --version="1.02" --log_level=debug
     ```
 
 ## Positional Arguments

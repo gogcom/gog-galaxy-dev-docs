@@ -21,7 +21,7 @@ GOGGalaxyPipelineBuilder.exe <project_json_file> <optional arguments>
 
 !!! Example
     ```
-    ./GOGGalaxyPipelineBuilder.exe build-game project.json --log_level=debug
+    ./GOGGalaxyPipelineBuilder build-game project.json --log_level=debug
     ```
 
 ## Positional Arguments

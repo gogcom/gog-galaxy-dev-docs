@@ -21,7 +21,7 @@ GOGGalaxyPipelineBuilder.exe publish-build <base_product_id> <build_id> <branch>
 
 !!! Example
     ```
-    ./GOGGalaxyPipelineBuilder.exe publish-build 0123456789 01234567890123456 Staging --branch_password="xyz" --log_level=debug
+    ./GOGGalaxyPipelineBuilder publish-build 0123456789 01234567890123456 Staging --branch_password="xyz" --log_level=debug
     ```
 
 ## Positional Arguments

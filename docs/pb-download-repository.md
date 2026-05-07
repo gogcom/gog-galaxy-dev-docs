@@ -21,7 +21,7 @@ GOGGalaxyPipelineBuilder.exe download-repository <base_product_id> <output> <opt
 
 !!! Example
     ```
-    ./GOGGalaxyPipelineBuilder.exe download-repository 0123456789 ~/Downloads/ --branch=staging --branch_password="xyz"
+    ./GOGGalaxyPipelineBuilder download-repository 0123456789 ~/Downloads/ --branch=staging --branch_password="xyz"
     ```
 
 ## Positional Arguments

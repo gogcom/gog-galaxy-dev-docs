@@ -21,7 +21,7 @@ GOGGalaxyPipelineBuilder.exe download-extract <base_product_id> <output> <build_
 
 !!! Example
     ```
-    ./GOGGalaxyPipelineBuilder.exe download-extract 0123456789 ~/Downloads/ 01234567890123456 --username="abcd" --password="xyz"
+    ./GOGGalaxyPipelineBuilder download-extract 0123456789 ~/Downloads/ 01234567890123456 --username="abcd" --password="xyz"
     ```
 
 ## Positional Arguments
