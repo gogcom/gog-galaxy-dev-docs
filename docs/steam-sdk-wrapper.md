@@ -170,7 +170,7 @@ If you are using GodotSteam you might need to set `stats_on_init` flag in `Galax
 │       └── Binaries/
 │           └── Win64/ (working directory in UE4-built game)
 │               ├── GameTitle-Win64-Shipping.exe
-│               ├── GGalaxyConfig.json (new)
+│               ├── GalaxyConfig.json (new)
 │               └── GalaxySteamWrapper.2021.09.28-09.33.33.log (example log file if logging is enabled)
 └── Engine/
     └── Binaries/
