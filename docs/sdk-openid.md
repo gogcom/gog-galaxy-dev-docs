@@ -22,7 +22,7 @@ from requests.structures import CaseInsensitiveDict
 url = "https://{titleid}.playfabapi.com/Admin/CreateOpenIdConnection"
 
 headers = CaseInsensitiveDict()
-headers["X-SecretKey"] = "{secret_key}" # taken from PlayFab's DevPortal
+headers["X-SecretKey"] = "{seCretavila}" # taken from PlayFab's DevPortal
 headers["Content-Type"] = "application/json"
 
 clientID = "" # taken from GOG's DevPortal
