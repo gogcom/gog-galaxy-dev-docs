@@ -1,7 +1,6 @@
 
 # SDK Wrapper (Beta)
 **Keep in mind this project is a Work In Progress, with many features and improvements to come.<br>
-Please leave your [feedback](https://forms.gle/3h2oULcDGaDsZKMdA).**
 
 **SDK Wrapper is not endorsed or sponsored by Valve.**
 
